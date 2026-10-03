@@ -1,15 +1,15 @@
 # -*- mode: python ; coding: utf-8 -*-
-from PyInstaller.utils.hooks import collect_submodules
+from PyInstaller.utils.hooks import collect_all, collect_submodules
 
-hiddenimports = []
-hiddenimports += collect_submodules('uvicorn')
+pydantic_core_datas, pydantic_core_binaries, pydantic_core_hiddenimports = collect_all('pydantic_core')
+hiddenimports = collect_submodules('uvicorn') + pydantic_core_hiddenimports
 
 
 a = Analysis(
     ['app.py'],
     pathex=[],
-    binaries=[],
-    datas=[('static', 'static'), ('seed.json', '.')],
+    binaries=pydantic_core_binaries,
+    datas=[('static', 'static'), ('seed.json', '.')] + pydantic_core_datas,
     hiddenimports=hiddenimports,
     hookspath=[],
     hooksconfig={},

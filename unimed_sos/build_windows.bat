@@ -15,13 +15,14 @@ echo Python encontrado:
 %PY% --version >> %LOG% 2>&1
 
 echo [1/3] Criando ambiente...
-%PY% -m venv .venv >> %LOG% 2>&1 || goto erro
+%PY% -m venv --clear .venv >> %LOG% 2>&1 || goto erro
 call .venv\Scripts\activate.bat
 echo [2/3] Instalando bibliotecas...
 python -m pip install --upgrade pip >> %LOG% 2>&1
 python -m pip install -r requirements_app.txt >> %LOG% 2>&1 || goto erro
+python -c "import fastapi, pydantic_core._pydantic_core, uvicorn, webview" >> %LOG% 2>&1 || goto erro
 echo [3/3] Gerando o executavel unico (uma unica instancia/arquivo)...
-pyinstaller --noconfirm --clean --windowed --onefile --icon "icone.ico" --name "ControleTreinamentosSOS" --add-data "static;static" --add-data "seed.json;." --collect-submodules uvicorn app.py >> %LOG% 2>&1 || goto erro
+pyinstaller --noconfirm --clean ControleTreinamentosSOS.spec >> %LOG% 2>&1 || goto erro
 
 echo.
 echo PRONTO!

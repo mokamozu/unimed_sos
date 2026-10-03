@@ -1,41 +1,107 @@
-Inicio: 03/10/2026 14:52:02,64 
+Inicio: 03/10/2026 15:01:51,51 
 Python 3.13.14
-Requirement already satisfied: pip in .\.venv\Lib\site-packages (26.2.1)
-Requirement already satisfied: fastapi in .\.venv\Lib\site-packages (from -r requirements_app.txt (line 1)) (0.142.2)
-Requirement already satisfied: uvicorn in .\.venv\Lib\site-packages (from -r requirements_app.txt (line 2)) (0.54.0)
-Requirement already satisfied: pywebview in .\.venv\Lib\site-packages (from -r requirements_app.txt (line 3)) (6.2.1)
-Requirement already satisfied: pyinstaller in .\.venv\Lib\site-packages (from -r requirements_app.txt (line 4)) (6.22.3)
-Requirement already satisfied: starlette>=0.46.0 in .\.venv\Lib\site-packages (from fastapi->-r requirements_app.txt (line 1)) (1.7.0)
-Requirement already satisfied: pydantic>=2.9.0 in .\.venv\Lib\site-packages (from fastapi->-r requirements_app.txt (line 1)) (2.13.5)
-Requirement already satisfied: typing-extensions>=4.8.0 in .\.venv\Lib\site-packages (from fastapi->-r requirements_app.txt (line 1)) (4.16.0)
-Requirement already satisfied: typing-inspection>=0.4.2 in .\.venv\Lib\site-packages (from fastapi->-r requirements_app.txt (line 1)) (0.4.4)
-Requirement already satisfied: annotated-doc>=0.0.2 in .\.venv\Lib\site-packages (from fastapi->-r requirements_app.txt (line 1)) (0.0.5)
-Requirement already satisfied: opentelemetry-api>=1.44.0 in .\.venv\Lib\site-packages (from fastapi->-r requirements_app.txt (line 1)) (1.45.0)
-Requirement already satisfied: click>=7.0 in .\.venv\Lib\site-packages (from uvicorn->-r requirements_app.txt (line 2)) (8.5.0)
-Requirement already satisfied: h11>=0.8 in .\.venv\Lib\site-packages (from uvicorn->-r requirements_app.txt (line 2)) (0.16.0)
-Requirement already satisfied: pythonnet in .\.venv\Lib\site-packages (from pywebview->-r requirements_app.txt (line 3)) (3.2.0)
-Requirement already satisfied: proxy_tools in .\.venv\Lib\site-packages (from pywebview->-r requirements_app.txt (line 3)) (0.1.0)
-Requirement already satisfied: bottle in .\.venv\Lib\site-packages (from pywebview->-r requirements_app.txt (line 3)) (0.13.4)
-Requirement already satisfied: altgraph in .\.venv\Lib\site-packages (from pyinstaller->-r requirements_app.txt (line 4)) (0.17.5)
-Requirement already satisfied: packaging>=22.0 in .\.venv\Lib\site-packages (from pyinstaller->-r requirements_app.txt (line 4)) (26.3)
-Requirement already satisfied: pefile>=2022.5.30 in .\.venv\Lib\site-packages (from pyinstaller->-r requirements_app.txt (line 4)) (2024.8.26)
-Requirement already satisfied: pyinstaller-hooks-contrib>=2026.7 in .\.venv\Lib\site-packages (from pyinstaller->-r requirements_app.txt (line 4)) (2026.8)
-Requirement already satisfied: pywin32-ctypes>=0.2.1 in .\.venv\Lib\site-packages (from pyinstaller->-r requirements_app.txt (line 4)) (0.2.3)
-Requirement already satisfied: setuptools>=42.0.0 in .\.venv\Lib\site-packages (from pyinstaller->-r requirements_app.txt (line 4)) (84.0.0)
-Requirement already satisfied: annotated-types>=0.6.0 in .\.venv\Lib\site-packages (from pydantic>=2.9.0->fastapi->-r requirements_app.txt (line 1)) (0.8.0)
-Requirement already satisfied: pydantic-core==2.46.5 in .\.venv\Lib\site-packages (from pydantic>=2.9.0->fastapi->-r requirements_app.txt (line 1)) (2.46.5)
-Requirement already satisfied: anyio<5,>=4.0.0 in .\.venv\Lib\site-packages (from starlette>=0.46.0->fastapi->-r requirements_app.txt (line 1)) (4.15.1)
-Requirement already satisfied: idna>=2.8 in .\.venv\Lib\site-packages (from anyio<5,>=4.0.0->starlette>=0.46.0->fastapi->-r requirements_app.txt (line 1)) (3.20)
-Requirement already satisfied: clr_loader<0.4.0,>=0.3.1 in .\.venv\Lib\site-packages (from pythonnet->pywebview->-r requirements_app.txt (line 3)) (0.3.1)
-Requirement already satisfied: cffi>=1.17 in .\.venv\Lib\site-packages (from clr_loader<0.4.0,>=0.3.1->pythonnet->pywebview->-r requirements_app.txt (line 3)) (2.1.1)
-Requirement already satisfied: pycparser in .\.venv\Lib\site-packages (from cffi>=1.17->clr_loader<0.4.0,>=0.3.1->pythonnet->pywebview->-r requirements_app.txt (line 3)) (3.0)
-184 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.8
-184 INFO: Python: 3.13.14
-199 INFO: Platform: Windows-11-10.0.26300-SP0
-199 INFO: Python environment: C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\.venv
-200 INFO: wrote C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\ControleTreinamentosSOS.spec
-205 INFO: Removing temporary files and cleaning cache in C:\Users\meyiq\AppData\Local\pyinstaller
-714 INFO: Module search paths (PYTHONPATH):
+Requirement already satisfied: pip in .\.venv\Lib\site-packages (26.1.2)
+Collecting pip
+  Using cached pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+Using cached pip-26.2.1-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 26.1.2
+    Uninstalling pip-26.1.2:
+      Successfully uninstalled pip-26.1.2
+Successfully installed pip-26.2.1
+Collecting fastapi (from -r requirements_app.txt (line 1))
+  Using cached fastapi-0.142.2-py3-none-any.whl.metadata (27 kB)
+Collecting uvicorn (from -r requirements_app.txt (line 2))
+  Using cached uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting pywebview (from -r requirements_app.txt (line 3))
+  Using cached pywebview-6.2.1-py3-none-any.whl.metadata (4.9 kB)
+Collecting pyinstaller (from -r requirements_app.txt (line 4))
+  Using cached pyinstaller-6.22.3-py3-none-win_amd64.whl.metadata (8.5 kB)
+Collecting starlette>=0.46.0 (from fastapi->-r requirements_app.txt (line 1))
+  Using cached starlette-1.7.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting pydantic>=2.9.0 (from fastapi->-r requirements_app.txt (line 1))
+  Using cached pydantic-2.13.5-py3-none-any.whl.metadata (110 kB)
+Collecting typing-extensions>=4.8.0 (from fastapi->-r requirements_app.txt (line 1))
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting typing-inspection>=0.4.2 (from fastapi->-r requirements_app.txt (line 1))
+  Using cached typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting annotated-doc>=0.0.2 (from fastapi->-r requirements_app.txt (line 1))
+  Using cached annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+Collecting opentelemetry-api>=1.44.0 (from fastapi->-r requirements_app.txt (line 1))
+  Using cached opentelemetry_api-1.45.0-py3-none-any.whl.metadata (1.4 kB)
+Collecting click>=7.0 (from uvicorn->-r requirements_app.txt (line 2))
+  Using cached click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting h11>=0.8 (from uvicorn->-r requirements_app.txt (line 2))
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting pythonnet (from pywebview->-r requirements_app.txt (line 3))
+  Using cached pythonnet-3.2.0-cp311.cp312.cp313.cp314.cp315-none-any.whl.metadata (6.5 kB)
+Collecting proxy_tools (from pywebview->-r requirements_app.txt (line 3))
+  Using cached proxy_tools-0.1.0-py3-none-any.whl
+Collecting bottle (from pywebview->-r requirements_app.txt (line 3))
+  Using cached bottle-0.13.4-py2.py3-none-any.whl.metadata (1.6 kB)
+Collecting altgraph (from pyinstaller->-r requirements_app.txt (line 4))
+  Using cached altgraph-0.17.5-py2.py3-none-any.whl.metadata (7.5 kB)
+Collecting packaging>=22.0 (from pyinstaller->-r requirements_app.txt (line 4))
+  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pefile>=2022.5.30 (from pyinstaller->-r requirements_app.txt (line 4))
+  Using cached pefile-2024.8.26-py3-none-any.whl.metadata (1.4 kB)
+Collecting pyinstaller-hooks-contrib>=2026.7 (from pyinstaller->-r requirements_app.txt (line 4))
+  Using cached pyinstaller_hooks_contrib-2026.8-py3-none-any.whl.metadata (16 kB)
+Collecting pywin32-ctypes>=0.2.1 (from pyinstaller->-r requirements_app.txt (line 4))
+  Using cached pywin32_ctypes-0.2.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting setuptools>=42.0.0 (from pyinstaller->-r requirements_app.txt (line 4))
+  Using cached setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi->-r requirements_app.txt (line 1))
+  Using cached annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.46.5 (from pydantic>=2.9.0->fastapi->-r requirements_app.txt (line 1))
+  Using cached pydantic_core-2.46.5-cp313-cp313-win_amd64.whl.metadata (6.7 kB)
+Collecting anyio<5,>=4.0.0 (from starlette>=0.46.0->fastapi->-r requirements_app.txt (line 1))
+  Using cached anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+Collecting idna>=2.8 (from anyio<5,>=4.0.0->starlette>=0.46.0->fastapi->-r requirements_app.txt (line 1))
+  Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting clr_loader<0.4.0,>=0.3.1 (from pythonnet->pywebview->-r requirements_app.txt (line 3))
+  Using cached clr_loader-0.3.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting cffi>=1.17 (from clr_loader<0.4.0,>=0.3.1->pythonnet->pywebview->-r requirements_app.txt (line 3))
+  Using cached cffi-2.1.1-cp313-cp313-win_amd64.whl.metadata (2.6 kB)
+Collecting pycparser (from cffi>=1.17->clr_loader<0.4.0,>=0.3.1->pythonnet->pywebview->-r requirements_app.txt (line 3))
+  Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+Using cached fastapi-0.142.2-py3-none-any.whl (144 kB)
+Using cached uvicorn-0.54.0-py3-none-any.whl (87 kB)
+Using cached pywebview-6.2.1-py3-none-any.whl (525 kB)
+Using cached pyinstaller-6.22.3-py3-none-win_amd64.whl (1.5 MB)
+Using cached annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+Using cached click-8.5.0-py3-none-any.whl (125 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Using cached opentelemetry_api-1.45.0-py3-none-any.whl (60 kB)
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Using cached pefile-2024.8.26-py3-none-any.whl (74 kB)
+Using cached pydantic-2.13.5-py3-none-any.whl (472 kB)
+Using cached pydantic_core-2.46.5-cp313-cp313-win_amd64.whl (2.0 MB)
+Using cached annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Using cached pyinstaller_hooks_contrib-2026.8-py3-none-any.whl (462 kB)
+Using cached pywin32_ctypes-0.2.3-py3-none-any.whl (30 kB)
+Using cached setuptools-84.0.0-py3-none-any.whl (818 kB)
+Using cached starlette-1.7.0-py3-none-any.whl (78 kB)
+Using cached anyio-4.15.1-py3-none-any.whl (132 kB)
+Using cached idna-3.20-py3-none-any.whl (69 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Using cached typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Using cached altgraph-0.17.5-py2.py3-none-any.whl (21 kB)
+Using cached bottle-0.13.4-py2.py3-none-any.whl (103 kB)
+Using cached pythonnet-3.2.0-cp311.cp312.cp313.cp314.cp315-none-any.whl (222 kB)
+Using cached clr_loader-0.3.1-py3-none-any.whl (55 kB)
+Using cached cffi-2.1.1-cp313-cp313-win_amd64.whl (185 kB)
+Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+Installing collected packages: proxy_tools, bottle, altgraph, typing-extensions, setuptools, pywin32-ctypes, pycparser, pefile, packaging, idna, h11, click, annotated-types, annotated-doc, uvicorn, typing-inspection, pyinstaller-hooks-contrib, pydantic-core, opentelemetry-api, cffi, anyio, starlette, pyinstaller, pydantic, clr_loader, pythonnet, fastapi, pywebview
+
+Successfully installed altgraph-0.17.5 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 bottle-0.13.4 cffi-2.1.1 click-8.5.0 clr_loader-0.3.1 fastapi-0.142.2 h11-0.16.0 idna-3.20 opentelemetry-api-1.45.0 packaging-26.3 pefile-2024.8.26 proxy_tools-0.1.0 pycparser-3.0 pydantic-2.13.5 pydantic-core-2.46.5 pyinstaller-6.22.3 pyinstaller-hooks-contrib-2026.8 pythonnet-3.2.0 pywebview-6.2.1 pywin32-ctypes-0.2.3 setuptools-84.0.0 starlette-1.7.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.54.0
+604 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.8
+604 INFO: Python: 3.13.14
+619 INFO: Platform: Windows-11-10.0.26300-SP0
+619 INFO: Python environment: C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\.venv
+629 INFO: Removing temporary files and cleaning cache in C:\Users\meyiq\AppData\Local\pyinstaller
+2177 INFO: Module search paths (PYTHONPATH):
 ['C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Scripts\\pyinstaller.exe',
  'C:\\Program '
  'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\\python313.zip',
@@ -48,106 +114,104 @@ Requirement already satisfied: pycparser in .\.venv\Lib\site-packages (from cffi
  'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv',
  'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages',
  'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos']
-1216 INFO: Appending 'datas' from .spec
-1217 INFO: checking Analysis
-1217 INFO: Building Analysis because Analysis-00.toc is non existent
-1217 INFO: Looking for Python shared library...
-1217 INFO: Using Python shared library: C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\python313.dll
-1217 INFO: Running Analysis Analysis-00.toc
-1217 INFO: Target bytecode optimization level: 0
-1218 INFO: Initializing module dependency graph...
-1219 INFO: Initializing module graph hook caches...
-1238 INFO: Analyzing modules for base_library.zip ...
-2635 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-2648 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-2761 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-5032 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-6550 INFO: Caching module dependency graph...
-6588 INFO: Analyzing C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\app.py
-6908 INFO: Processing standard module hook 'hook-uvicorn.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-7590 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-7692 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-8012 INFO: Processing standard module hook 'hook-sysconfig.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-8017 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-8730 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-8731 INFO: SetuptoolsInfo: initializing cached setuptools info...
-9992 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-10284 INFO: Processing standard module hook 'hook-difflib.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-10424 INFO: Processing standard module hook 'hook-webbrowser.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-10661 INFO: Processing standard module hook 'hook-websockets.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-11489 INFO: Processing standard module hook 'hook-anyio.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-12631 INFO: Processing standard module hook 'hook-webview.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\webview\\__pyinstaller'
-13366 INFO: Processing pre-safe-import-module hook 'hook-gi.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-13534 INFO: Processing standard module hook 'hook-clr.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\pythonnet\\_pyinstaller'
-13562 INFO: Processing standard module hook 'hook-clr_loader.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-13685 INFO: Processing standard module hook 'hook-pycparser.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-13907 INFO: Processing standard module hook 'hook-setuptools.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-13922 INFO: Processing pre-safe-import-module hook 'hook-distutils.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-13954 INFO: Processing pre-safe-import-module hook 'hook-jaraco.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-13955 INFO: Setuptools: 'jaraco' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.jaraco'!
-13967 INFO: Processing pre-safe-import-module hook 'hook-more_itertools.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-13968 INFO: Setuptools: 'more_itertools' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.more_itertools'!
-14123 INFO: Processing standard module hook 'hook-_osx_support.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-14140 INFO: Processing pre-safe-import-module hook 'hook-packaging.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-14451 INFO: Processing standard module hook 'hook-setuptools._vendor.jaraco.text.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-14452 INFO: Processing pre-safe-import-module hook 'hook-importlib_resources.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-14462 INFO: Processing pre-safe-import-module hook 'hook-backports.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-14463 INFO: Setuptools: 'backports' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.backports'!
-15080 INFO: Processing pre-safe-import-module hook 'hook-tomli.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-15080 INFO: Setuptools: 'tomli' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.tomli'!
-15650 INFO: Processing pre-safe-import-module hook 'hook-wheel.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-15650 INFO: Setuptools: 'wheel' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.wheel'!
-16459 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-16564 INFO: Processing standard module hook 'hook-sqlite3.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
-17443 INFO: Processing standard module hook 'hook-pydantic.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-229 WARNING: Failed to collect submodules for 'pydantic' because importing 'pydantic' raised: ModuleNotFoundError: No module named 'pydantic_core._pydantic_core'
-18616 INFO: Processing standard module hook 'hook-zoneinfo.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-20260 INFO: Processing standard module hook 'hook-opentelemetry.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-20803 INFO: Analyzing hidden import 'uvicorn.__main__'
-20804 INFO: Analyzing hidden import 'uvicorn.lifespan'
-20805 INFO: Analyzing hidden import 'uvicorn.lifespan.off'
-20807 INFO: Analyzing hidden import 'uvicorn.lifespan.on'
-20822 INFO: Analyzing hidden import 'uvicorn.loops'
-20824 INFO: Analyzing hidden import 'uvicorn.loops.asyncio'
-20827 INFO: Analyzing hidden import 'uvicorn.loops.auto'
-20832 INFO: Analyzing hidden import 'uvicorn.loops.zuvloop'
-20835 INFO: Analyzing hidden import 'uvicorn.protocols.http.auto'
-20837 INFO: Analyzing hidden import 'uvicorn.protocols.websockets.auto'
-20838 INFO: Analyzing hidden import 'uvicorn.workers'
-20844 INFO: Processing module hooks (post-graph stage)...
-21086 WARNING: Hidden import "pycparser.lextab" not found!
-21086 WARNING: Hidden import "pycparser.yacctab" not found!
-21368 WARNING: Hidden import "tzdata" not found!
-21487 INFO: Performing binary vs. data reclassification (30 entries)
-21499 INFO: Looking for ctypes DLLs
-21613 INFO: Analyzing run-time hooks ...
-21618 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-21622 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-21624 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-21627 INFO: Including run-time hook 'pyi_rth_setuptools.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-21641 INFO: Creating base_library.zip...
-21666 INFO: Looking for dynamic libraries
-22539 INFO: Extra DLL search directories (AddDllDirectory): []
-22539 INFO: Extra DLL search directories (PATH): []
-22985 INFO: Warnings written to C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\build\ControleTreinamentosSOS\warn-ControleTreinamentosSOS.txt
-23082 INFO: Graph cross-reference written to C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\build\ControleTreinamentosSOS\xref-ControleTreinamentosSOS.html
-23123 INFO: checking PYZ
-23123 INFO: Building PYZ because PYZ-00.toc is non existent
-23123 INFO: Building PYZ (ZlibArchive) C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\build\ControleTreinamentosSOS\PYZ-00.pyz
-23862 INFO: Building PYZ (ZlibArchive) C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\build\ControleTreinamentosSOS\PYZ-00.pyz completed successfully.
-23886 INFO: checking PKG
-23886 INFO: Building PKG because PKG-00.toc is non existent
-23886 INFO: Building PKG (CArchive) ControleTreinamentosSOS.pkg
-26277 INFO: Building PKG (CArchive) ControleTreinamentosSOS.pkg completed successfully.
-26281 INFO: Bootloader C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\.venv\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
-26281 INFO: checking EXE
-26281 INFO: Building EXE because EXE-00.toc is non existent
-26281 INFO: Building EXE from EXE-00.toc
-26283 INFO: Copying bootloader EXE to C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\dist\ControleTreinamentosSOS.exe
-26331 INFO: Copying icon to EXE
-26374 INFO: Copying 0 resources to EXE
-26375 INFO: Embedding manifest in EXE
-26418 INFO: Appending PKG archive to EXE
-26600 INFO: Fixing EXE headers
-26964 INFO: Building EXE from EXE-00.toc completed successfully.
-26967 INFO: Build complete! The results are available in: C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\dist
+2661 INFO: Appending 'datas' from .spec
+2663 INFO: checking Analysis
+2663 INFO: Building Analysis because Analysis-00.toc is non existent
+2663 INFO: Looking for Python shared library...
+2663 INFO: Using Python shared library: C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\python313.dll
+2663 INFO: Running Analysis Analysis-00.toc
+2663 INFO: Target bytecode optimization level: 0
+2664 INFO: Initializing module dependency graph...
+2665 INFO: Initializing module graph hook caches...
+2692 INFO: Analyzing modules for base_library.zip ...
+4243 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+4757 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+5004 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+6261 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+7787 INFO: Caching module dependency graph...
+7826 INFO: Analyzing C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\app.py
+8141 INFO: Processing standard module hook 'hook-uvicorn.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+8808 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+8920 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+9246 INFO: Processing standard module hook 'hook-sysconfig.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+9257 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+9884 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+9896 INFO: SetuptoolsInfo: initializing cached setuptools info...
+11389 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+11681 INFO: Processing standard module hook 'hook-difflib.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+11848 INFO: Processing standard module hook 'hook-webbrowser.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+12183 INFO: Processing standard module hook 'hook-webview.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\webview\\__pyinstaller'
+12831 INFO: Processing pre-safe-import-module hook 'hook-gi.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+13011 INFO: Processing standard module hook 'hook-clr.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\pythonnet\\_pyinstaller'
+13045 INFO: Processing standard module hook 'hook-clr_loader.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+13171 INFO: Processing standard module hook 'hook-pycparser.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+13354 INFO: Processing standard module hook 'hook-setuptools.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+13374 INFO: Processing pre-safe-import-module hook 'hook-distutils.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+13416 INFO: Processing pre-safe-import-module hook 'hook-jaraco.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+13422 INFO: Setuptools: 'jaraco' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.jaraco'!
+13435 INFO: Processing pre-safe-import-module hook 'hook-more_itertools.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+13440 INFO: Setuptools: 'more_itertools' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.more_itertools'!
+13595 INFO: Processing standard module hook 'hook-_osx_support.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+13619 INFO: Processing pre-safe-import-module hook 'hook-packaging.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+13923 INFO: Processing standard module hook 'hook-setuptools._vendor.jaraco.text.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+13930 INFO: Processing pre-safe-import-module hook 'hook-importlib_resources.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+13951 INFO: Processing pre-safe-import-module hook 'hook-backports.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+13958 INFO: Setuptools: 'backports' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.backports'!
+14544 INFO: Processing pre-safe-import-module hook 'hook-tomli.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+14552 INFO: Setuptools: 'tomli' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.tomli'!
+15139 INFO: Processing pre-safe-import-module hook 'hook-wheel.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+15145 INFO: Setuptools: 'wheel' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.wheel'!
+15979 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+16088 INFO: Processing standard module hook 'hook-sqlite3.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks'
+16698 INFO: Processing standard module hook 'hook-anyio.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+17717 INFO: Processing standard module hook 'hook-pydantic.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+19155 INFO: Processing standard module hook 'hook-zoneinfo.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+20721 INFO: Processing standard module hook 'hook-opentelemetry.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+21112 INFO: Analyzing hidden import 'uvicorn.__main__'
+21113 INFO: Analyzing hidden import 'uvicorn.lifespan'
+21114 INFO: Analyzing hidden import 'uvicorn.lifespan.off'
+21116 INFO: Analyzing hidden import 'uvicorn.lifespan.on'
+21123 INFO: Analyzing hidden import 'uvicorn.loops'
+21124 INFO: Analyzing hidden import 'uvicorn.loops.asyncio'
+21125 INFO: Analyzing hidden import 'uvicorn.loops.auto'
+21127 INFO: Analyzing hidden import 'uvicorn.loops.zuvloop'
+21129 INFO: Analyzing hidden import 'uvicorn.protocols.http.auto'
+21130 INFO: Analyzing hidden import 'uvicorn.protocols.websockets.auto'
+21131 INFO: Analyzing hidden import 'uvicorn.workers'
+21137 INFO: Processing module hooks (post-graph stage)...
+21363 WARNING: Hidden import "pycparser.lextab" not found!
+21363 WARNING: Hidden import "pycparser.yacctab" not found!
+21561 WARNING: Hidden import "tzdata" not found!
+21689 INFO: Performing binary vs. data reclassification (40 entries)
+22237 INFO: Looking for ctypes DLLs
+22310 INFO: Analyzing run-time hooks ...
+22314 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+22317 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+22320 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+22323 INFO: Including run-time hook 'pyi_rth_setuptools.py' from 'C:\\Users\\meyiq\\GameMakerProjects\\Asthoria\\unimed_sos\\unimed_sos\\.venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+22337 INFO: Creating base_library.zip...
+22368 INFO: Looking for dynamic libraries
+23744 INFO: Extra DLL search directories (AddDllDirectory): []
+23745 INFO: Extra DLL search directories (PATH): []
+24206 INFO: Warnings written to C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\build\ControleTreinamentosSOS\warn-ControleTreinamentosSOS.txt
+24293 INFO: Graph cross-reference written to C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\build\ControleTreinamentosSOS\xref-ControleTreinamentosSOS.html
+24333 INFO: checking PYZ
+24333 INFO: Building PYZ because PYZ-00.toc is non existent
+24333 INFO: Building PYZ (ZlibArchive) C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\build\ControleTreinamentosSOS\PYZ-00.pyz
+25079 INFO: Building PYZ (ZlibArchive) C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\build\ControleTreinamentosSOS\PYZ-00.pyz completed successfully.
+25101 INFO: checking PKG
+25102 INFO: Building PKG because PKG-00.toc is non existent
+25102 INFO: Building PKG (CArchive) ControleTreinamentosSOS.pkg
+28258 INFO: Building PKG (CArchive) ControleTreinamentosSOS.pkg completed successfully.
+28261 INFO: Bootloader C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\.venv\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+28262 INFO: checking EXE
+28262 INFO: Building EXE because EXE-00.toc is non existent
+28262 INFO: Building EXE from EXE-00.toc
+28264 INFO: Copying bootloader EXE to C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\dist\ControleTreinamentosSOS.exe
+28359 INFO: Copying icon to EXE
+28401 INFO: Copying 0 resources to EXE
+28401 INFO: Embedding manifest in EXE
+28443 INFO: Appending PKG archive to EXE
+28613 INFO: Fixing EXE headers
+28979 INFO: Building EXE from EXE-00.toc completed successfully.
+28982 INFO: Build complete! The results are available in: C:\Users\meyiq\GameMakerProjects\Asthoria\unimed_sos\unimed_sos\dist

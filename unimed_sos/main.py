@@ -101,6 +101,12 @@ def unidades():
         return [{"id": "default", "nome": "SOS Emergências Médicas", "dados": _estado_snapshot(c)}]
 
 
+@app.patch("/api/unidades")
+def ativa_unidade(item: dict):
+    unit_id = str(item.get("id", "")).strip() or "default"
+    return {"id": unit_id, "nome": "SOS Emergências Médicas"}
+
+
 @app.post("/api/unidades")
 def cria_unidade(item: dict):
     nome = str(item.get("nome", "")).strip() or "Nova unidade"

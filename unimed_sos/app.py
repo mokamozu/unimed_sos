@@ -1,5 +1,6 @@
 """Abre o sistema como programa de desktop: servidor interno + janela própria."""
 import msvcrt
+import ctypes
 import os
 import socket
 import tempfile
@@ -7,6 +8,7 @@ import threading
 import time
 import urllib.error
 import urllib.request
+from pathlib import Path
 
 import uvicorn
 import webview
@@ -60,7 +62,18 @@ def main():
             raise RuntimeError("O servidor local não iniciou a tempo.")
         webview.create_window("Controle de Treinamentos - SOS Emergências Médicas", url,
                               width=1360, height=860, min_size=(1000, 650))
-        webview.start()
+        try:
+            webview.start(gui="edgechromium")
+        except webview.WebViewException as exc:
+            message = (
+                "Não foi possível abrir a janela do aplicativo.\n\n"
+                "Instale o Microsoft Edge WebView2 Runtime e tente novamente:\n"
+                "https://developer.microsoft.com/microsoft-edge/webview2/\n\n"
+                f"Detalhe: {exc}"
+            )
+            ctypes.windll.user32.MessageBoxW(
+                None, message, "Controle de Treinamentos SOS", 0x10
+            )
         srv.should_exit = True
     finally:
         lock.seek(0)

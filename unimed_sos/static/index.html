@@ -31,10 +31,19 @@ main{flex:1;padding:34px 40px;max-width:1280px;position:relative;z-index:1}
 h1{font-size:25px;margin:0 0 4px;font-weight:650}.sub{color:var(--mut);margin:0 0 24px;font-size:14px}
 section{display:none}section.on{display:block;animation:in .5s cubic-bezier(.2,.7,.2,1) both}
 @keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-.grid{display:grid;gap:18px}.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.grid{display:grid;gap:18px}.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
 .card{background:var(--glass);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);
 border:1px solid rgba(255,255,255,.8);box-shadow:0 10px 30px rgba(0,86,58,.09),inset 0 0 0 1px var(--line);border-radius:16px;padding:20px}
+.chart-card{position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.78),rgba(255,255,255,.42));
+border-color:rgba(255,255,255,.88);box-shadow:0 16px 36px rgba(0,86,58,.10),inset 0 1px 0 rgba(255,255,255,.9)}
+.chart-card::before{content:"";position:absolute;inset:0 0 auto;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.95),transparent);pointer-events:none}
 .card h3{margin:0 0 10px;font-size:14px;color:var(--g800);font-weight:650;letter-spacing:.2px}
+.chart-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.chart-heading h3{margin-bottom:6px}
+.chart-legend{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 6px;color:var(--mut);font-size:11.5px}
+.chart-legend span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.chart-legend i{width:9px;height:9px;border-radius:3px;background:#15966a}
+.chart-legend .pending{background:#e2a64a}
 .kpi .v{font-size:36px;font-weight:700;color:var(--g800);line-height:1.1;font-variant-numeric:tabular-nums}
 .kpi .l{font-size:12.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
 .kpi.bad .v{color:var(--bad)}.kpi{position:relative;overflow:hidden}
@@ -62,7 +71,7 @@ input:focus,select:focus{outline:2px solid var(--g400);outline-offset:1px}
 background:repeating-linear-gradient(45deg,rgba(255,255,255,.35) 0 4px,transparent 4px 8px),linear-gradient(90deg,var(--g400),var(--g600))}
 .fill.w{background:repeating-linear-gradient(45deg,rgba(255,255,255,.35) 0 4px,transparent 4px 8px),#d9a441}
 .fill.r{background:repeating-linear-gradient(45deg,rgba(255,255,255,.35) 0 4px,transparent 4px 8px),#c9604f}
-.chart{height:260px}.chart.fade{animation:pop .9s cubic-bezier(.2,.7,.2,1) both}
+.chart{height:290px;min-width:0}.chart.fade{animation:in .6s cubic-bezier(.2,.7,.2,1) both}
 @keyframes pop{from{opacity:0;transform:scale(.92) rotate(-4deg)}to{opacity:1;transform:none}}
 dialog{border:0;border-radius:18px;padding:0;width:min(760px,94vw);background:rgba(250,255,252,.96);box-shadow:0 30px 80px rgba(2,40,28,.35)}
 dialog::backdrop{background:rgba(2,40,28,.45);backdrop-filter:blur(3px)}dialog[open]{animation:pop .35s both}
@@ -103,8 +112,6 @@ body.rel-on #rel{display:block;width:100%;color:#10281f;font-size:11.5px}
   </nav>
   <div style="margin-top:auto;display:grid;gap:10px">
     <button class="b ghost" id="relatar-problema" style="width:100%;color:#fff;border-color:rgba(255,255,255,.35)">Relatar problema</button>
-    <button class="b ghost" id="selecionar-unidade" style="width:100%;color:#fff;border-color:rgba(255,255,255,.35)">Unidades</button>
-    <button class="b ghost" id="nova-unidade" style="width:100%;color:#fff;border-color:rgba(255,255,255,.35)">Nova unidade</button>
     <button class="b ghost" id="limpar" style="width:100%;color:#fff;border-color:rgba(255,255,255,.35)">Limpar todos os dados</button>
   </div>
 </aside>
@@ -115,9 +122,11 @@ body.rel-on #rel{display:block;width:100%;color:#10281f;font-size:11.5px}
     <a class="b ghost" id="mail" style="color:#fff;border-color:rgba(255,255,255,.5)" href="#">Notificar convocados</a></div>
   <div class="grid g4" style="margin-bottom:18px" id="kpis"></div>
   <div class="grid g3" style="margin-bottom:18px">
-    <div class="card"><h3>Situação da base ativa</h3><div id="c1" class="chart"></div></div>
-    <div class="card"><h3>Distribuição por função</h3><div id="c2" class="chart"></div></div>
-    <div class="card"><h3>Programa anual 2026, entregas por mês</h3><div id="c3" class="chart"></div></div>
+    <div class="card chart-card"><h3>Situação da base ativa</h3><div id="c1" class="chart"></div></div>
+    <div class="card chart-card"><div class="chart-heading"><h3>Distribuição por função</h3>
+      <div class="chart-legend" aria-label="Legenda do gráfico"><span><i></i>Treinados</span><span><i class="pending"></i>Pendentes</span></div></div>
+      <div id="c2" class="chart"></div></div>
+    <div class="card chart-card"><h3>Programa anual 2026, entregas por mês</h3><div id="c3" class="chart"></div></div>
   </div>
   <div class="card"><h3>Colaboradores sem nenhuma participação</h3>
     <table><thead><tr><th>Nome</th><th>Matrícula</th><th>Função</th></tr></thead><tbody id="pend"></tbody></table></div>
@@ -148,104 +157,11 @@ const api=async(u,o)=>{const r=await fetch(u,o&&{method:o.m,headers:{'Content-Ty
 const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2800)};
 const cap=s=>s.charAt(0)+s.slice(1).toLowerCase();
 const G=['rgba(0,153,93,.62)','rgba(79,191,138,.55)','rgba(0,86,58,.6)','rgba(191,232,212,.8)','rgba(2,40,28,.45)'];
-const lay=(x={})=>({margin:{t:8,r:8,b:36,l:36},paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{family:'Segoe UI',size:12,color:'#10281f'},...x});
+const lay=(x={})=>({margin:{t:16,r:16,b:42,l:42},paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{family:'Segoe UI, system-ui, sans-serif',size:12,color:'#34564a'},hoverlabel:{bgcolor:'#073b2c',bordercolor:'rgba(255,255,255,.4)',font:{color:'#fff',family:'Segoe UI, system-ui, sans-serif'}},...x});
 const cfg={displayModeBar:false,responsive:true};
 const tag=(t,c='')=>`<span class="tag ${c}">${esc(t)}</span>`;
 const rows=(el,html)=>{el.innerHTML=html.map((h,i)=>h.replace('<tr','<tr style="--i:'+Math.min(i,30)+'"')).join('')};
 const pctCls=p=>p>=100?'':p>=60?'w':'r';
-const UNIT_KEY='SOS_TREINAMENTOS_V2';
-const UNIT_LIST_KEY='SOS_TREINAMENTOS_V2_UNIDADES';
-const UNIT_ACTIVE_KEY='SOS_TREINAMENTOS_V2_UNIDADE_ATIVA';
-
-function readUnits(){
-  try{const raw=localStorage.getItem(UNIT_LIST_KEY);const data=raw?JSON.parse(raw):[];return Array.isArray(data)?data:[];}catch{return []}
-}
-function persistUnits(units){localStorage.setItem(UNIT_LIST_KEY, JSON.stringify(units));}
-function ensureDefaultUnit(){
-  const currentRaw=localStorage.getItem(UNIT_KEY);
-  let current={participantes:[],turmas:[],vazio:true,setor:'SOS Emergências Médicas'};
-  try{if(currentRaw) current=JSON.parse(currentRaw);}catch{}
-  const units=readUnits();
-  if(!units.length){
-    const perfil={id:'default',nome:'SOS Emergências Médicas',data:current};
-    persistUnits([perfil]);
-    localStorage.setItem(UNIT_ACTIVE_KEY, perfil.id);
-    localStorage.setItem(UNIT_KEY, JSON.stringify(perfil.data));
-    return;
-  }
-  const activeId=localStorage.getItem(UNIT_ACTIVE_KEY) || units[0].id;
-  const active=units.find(u=>u.id===activeId) || units[0];
-  localStorage.setItem(UNIT_ACTIVE_KEY, active.id);
-  localStorage.setItem(UNIT_KEY, JSON.stringify(active.data));
-}
-async function getUnidades(){
-  try{
-    const lista=await api('/api/unidades');
-    const arr=Array.isArray(lista)?lista:[];
-    if(arr.length){persistUnits(arr.map(u=>({id:u.id||'default',nome:u.nome||'Unidade',data:u.dados||{}})));}
-    return arr;
-  }catch{
-    const raw=localStorage.getItem(UNIT_LIST_KEY);
-    try{return raw?JSON.parse(raw):[];}catch{return []}
-  }
-}
-
-async function ativarUnidade(id){
-  const unidades=await getUnidades();
-  const unidade=unidades.find(u=>u.id===id) || readUnits().find(u=>u.id===id) || {id, nome:'Unidade'};
-  try{
-    await api('/api/unidades',{m:'PATCH',b:{id}});
-  }catch{}
-  const dados = unidade.data || JSON.parse(localStorage.getItem(UNIT_KEY) || '{}');
-  try{localStorage.setItem(UNIT_ACTIVE_KEY, id);}catch{}
-  try{if(dados && Object.keys(dados).length) localStorage.setItem(UNIT_KEY, JSON.stringify(dados));}catch{}
-  toast('Unidade ativa: '+(unidade.nome || 'Unidade'));
-  if (typeof loadDash === 'function') show('dashboard');
-}
-
-async function abrirGerenciarUnidades(){
-  const unidades=await getUnidades();
-  const ativa=localStorage.getItem(UNIT_ACTIVE_KEY) || (unidades[0]&&unidades[0].id) || 'default';
-  const d=$('#dlg');
-  d.innerHTML=`<div class="dh"><b>Unidades</b></div>
-    <div class="db" style="display:grid;gap:10px;min-width:420px;max-width:520px">
-      ${unidades.length?unidades.map(u=>`<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:${u.id===ativa?'rgba(79,191,138,.12)':'rgba(255,255,255,.7)'}">
-        <div><b>${esc(u.nome||'Sem nome')}</b>${u.id===ativa?'<div class="sub" style="margin-top:4px">Ativa agora</div>':''}</div>
-        <button class="b sm ${u.id===ativa?'ghost':''}" data-unit-id="${esc(u.id)}">${u.id===ativa?'Selecionada':'Selecionar'}</button>
-      </div>`).join(''):'<p class="sub" style="margin:0">Nenhuma unidade cadastrada.</p>'}
-    </div>
-    <div class="df"><button class="b ghost" onclick="dlg.close()">Fechar</button><button class="b" id="u-open-new">Nova unidade</button></div>`;
-  d.showModal();
-  d.querySelectorAll('[data-unit-id]').forEach(btn=>btn.onclick=()=>{ativarUnidade(btn.dataset.unitId);d.close();});
-  $('#u-open-new').onclick=()=>{d.close();criarNovaUnidade();};
-}
-
-async function criarNovaUnidade(){
-  const d=$('#dlg');
-  d.innerHTML=`<div class="dh"><b>Nova unidade</b></div><div class="db" style="display:grid;gap:12px">
-    <input id="u-nome" placeholder="Nome da unidade" value="">
-    <label style="display:flex;gap:8px;align-items:center;font-size:13.5px"><input type="checkbox" id="u-clone" checked> Clonar os dados atuais para a nova unidade</label>
-  </div><div class="df"><span class="err" id="u-e"></span><button class="b ghost" onclick="dlg.close()">Cancelar</button><button class="b" id="u-ok">Criar unidade</button></div>`;
-  d.showModal();
-  $('#u-ok').onclick=async()=>{
-    const nome=($('#u-nome').value||'').trim() || 'Nova unidade';
-    try{
-      const res=await api('/api/unidades',{m:'POST',b:{nome,clonar:$('#u-clone').checked}});
-      const id = res && res.id ? res.id : 'unit-'+Date.now();
-      const atual = JSON.parse(localStorage.getItem(UNIT_KEY) || '{}');
-      const clone = $('#u-clone').checked ? { ...atual, setor: nome, vazio: false } : { participantes: [], turmas: [], vazio: true, setor: nome };
-      const unidades = readUnits();
-      const nova = { id, nome, data: clone };
-      const lista = [...unidades.filter(u => u.id !== id), nova];
-      persistUnits(lista);
-      localStorage.setItem(UNIT_ACTIVE_KEY, id);
-      localStorage.setItem(UNIT_KEY, JSON.stringify(clone));
-      d.close();
-      toast('Nova unidade criada');
-      show('dashboard');
-    }catch(x){$('#u-e').textContent=x.message}
-  };
-}
 function count(el,to){if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=to;return}
   const t0=performance.now();(function f(t){const k=Math.min((t-t0)/900,1);el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(t0)}
 function grow(root){root.querySelectorAll('.fill').forEach(f=>{f.style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>f.style.width=f.dataset.w+'%'))})}
@@ -268,25 +184,29 @@ async function loadDash(){
   const lista=d.pendentes.map((x,i)=>`${i+1}. ${x.nome} (${x.mat}) - ${x.cargo}`).join('\n');
   $('#mail').href='mailto:?subject='+encodeURIComponent('Convocação de treinamento - '+(p?p.tema:''))+'&body='+encodeURIComponent('Convocados prioritários:\n'+lista);
   rows($('#pend'),d.pendentes.map(x=>`<tr><td><b>${esc(x.nome)}</b></td><td>${esc(x.mat)}</td><td>${tag(x.cargo,'off')}</td></tr>`));
-  const pat=(s,fg)=>({shape:s,fgcolor:fg,bgcolor:'rgba(255,255,255,.55)',size:7,solidity:.45});
-  Plotly.newPlot('c1',[{type:'pie',hole:.62,labels:['Treinados','Pendentes'],values:[k.treinados,k.pendentes],sort:false,textinfo:'percent',
-    marker:{colors:['rgba(0,153,93,.75)','rgba(183,121,31,.6)'],pattern:pat(['','/'],'#00563a'),line:{color:'#fff',width:2}}}],lay({margin:{t:4,b:4,l:4,r:4},legend:{orientation:'h',y:-.05}}),cfg);
+  Plotly.newPlot('c1',[{type:'pie',hole:.7,labels:['Treinados','Pendentes'],values:[k.treinados,k.pendentes],sort:false,
+    textinfo:'percent',textposition:'inside',insidetextorientation:'horizontal',textfont:{color:'#fff',size:13},
+    hovertemplate:'%{label}<br><b>%{value}</b> pessoas (%{percent})<extra></extra>',
+    marker:{colors:['#15966a','#e2a64a'],line:{color:'rgba(255,255,255,.95)',width:3}}}],
+    lay({margin:{t:8,b:48,l:8,r:8},showlegend:true,legend:{orientation:'h',x:.5,xanchor:'center',y:-.08},
+      annotations:[{text:`Base ativa<br><b>${k.base}</b>`,showarrow:false,x:.5,y:.5,font:{size:14,color:'#315a4a'}}]}),cfg);
   const pc={};d.pendentes.forEach(p=>pc[p.cargo]=(pc[p.cargo]||0)+1);
   const cs=Object.entries(d.cargos).sort((a,b)=>b[1]-a[1]),nm=cs.map(c=>cap(c[0])),tr=cs.map(c=>c[1]-(pc[c[0]]||0)),pe=cs.map(c=>pc[c[0]]||0),mx=Math.max(...cs.map(c=>c[1]),1);
-  const lbl=a=>a.map(v=>v?String(v):'');
-  const serie=(name,col,pat)=>({type:'bar',orientation:'h',name,y:nm,x:nm.map(()=>0),text:nm.map(()=>''),textposition:'inside',insidetextanchor:'middle',hovertemplate:'%{y}<br>'+name+': %{x}<extra></extra>',
-    marker:{color:col,pattern:pat,line:{color:'rgba(255,255,255,.9)',width:1.5}},textfont:{color:'#02281c',size:13}});
-  Plotly.newPlot('c2',[serie('Treinados','rgba(0,153,93,.6)',{shape:'/',fgcolor:'rgba(0,86,58,.55)',bgcolor:'rgba(255,255,255,.35)',size:7,solidity:.3}),
-    serie('Pendentes','rgba(217,164,65,.55)',{shape:'.',fgcolor:'rgba(150,100,20,.6)',bgcolor:'rgba(255,255,255,.4)',size:6,solidity:.35})],
-    lay({barmode:'stack',bargap:.42,margin:{t:28,r:12,b:28,l:132},legend:{orientation:'h',y:1.13,x:0},
-      yaxis:{autorange:'reversed',showgrid:false,zeroline:false,ticks:''},xaxis:{range:[0,mx*1.08],gridcolor:'rgba(0,86,58,.08)',zeroline:false,tickformat:'d',dtick:mx>20?5:1}}),cfg)
-    .then(()=>Plotly.animate('c2',{data:[{x:tr,text:lbl(tr)},{x:pe,text:lbl(pe)}],traces:[0,1]},{transition:{duration:900,easing:'cubic-out'},frame:{duration:900}}));
-  const ms=Object.entries(pr.meses);
-  Plotly.newPlot('c3',[{type:'bar',name:'Realizadas',x:ms.map(m=>m[0].slice(0,3)),y:ms.map(()=>0),marker:{color:'rgba(0,153,93,.7)',pattern:{shape:'/',fgcolor:'#00563a',size:6,solidity:.3}}},
-    {type:'bar',name:'Pendentes',x:ms.map(m=>m[0].slice(0,3)),y:ms.map(()=>0),marker:{color:'rgba(191,232,212,.85)',pattern:{shape:'x',fgcolor:'#4fbf8a',size:6,solidity:.3}}}],
-    lay({barmode:'stack',legend:{orientation:'h',y:1.15},yaxis:{gridcolor:'rgba(0,86,58,.08)',range:[0,Math.max(...ms.map(m=>m[1][0]+m[1][1]),1)+1],dtick:1,zeroline:false}}),cfg)
-    .then(()=>Plotly.animate('c3',{data:[{y:ms.map(m=>m[1][0])},{y:ms.map(m=>m[1][1])}],traces:[0,1]},{transition:{duration:900,easing:'cubic-out'},frame:{duration:900}}));
-  $('#c1').classList.add('fade');
+  const labels=a=>a.map(v=>v?String(v):'');
+  Plotly.newPlot('c2',[
+    {type:'bar',orientation:'h',name:'Treinados',y:nm,x:tr,text:labels(tr),textposition:'inside',insidetextanchor:'middle',
+      hovertemplate:'%{y}<br>Treinados: <b>%{x}</b><extra></extra>',marker:{color:'#15966a',line:{color:'rgba(255,255,255,.9)',width:1}},textfont:{color:'#fff',size:12}},
+    {type:'bar',orientation:'h',name:'Pendentes',y:nm,x:pe,text:labels(pe),textposition:'inside',insidetextanchor:'middle',
+      hovertemplate:'%{y}<br>Pendentes: <b>%{x}</b><extra></extra>',marker:{color:'#e2a64a',line:{color:'rgba(255,255,255,.9)',width:1}},textfont:{color:'#3f321e',size:12}}],
+    lay({barmode:'stack',bargap:.38,margin:{t:10,r:10,b:36,l:124},showlegend:false,
+      uniformtext:{mode:'hide',minsize:11},yaxis:{autorange:'reversed',showgrid:false,zeroline:false,ticks:'',automargin:true},
+      xaxis:{range:[0,mx*1.16],gridcolor:'rgba(0,86,58,.09)',zeroline:false,tickformat:'d',dtick:mx>20?5:1}}),cfg);
+  const ms=Object.entries(pr.meses),months=ms.map(m=>m[0].slice(0,3)),done=ms.map(m=>m[1][0]),pending=ms.map(m=>m[1][1]),maxMonth=Math.max(...ms.map(m=>m[1][0]+m[1][1]),1);
+  Plotly.newPlot('c3',[
+    {type:'bar',name:'Realizadas',x:months,y:done,hovertemplate:'%{x}<br>Realizadas: <b>%{y}</b><extra></extra>',marker:{color:'#15966a',line:{color:'rgba(255,255,255,.8)',width:1}},},
+    {type:'bar',name:'Pendentes',x:months,y:pending,hovertemplate:'%{x}<br>Pendentes: <b>%{y}</b><extra></extra>',marker:{color:'#b8dfcf',line:{color:'rgba(255,255,255,.9)',width:1}}}],
+    lay({barmode:'stack',bargap:.34,margin:{t:16,r:12,b:38,l:38},legend:{orientation:'h',x:.5,xanchor:'center',y:1.14},
+      xaxis:{showgrid:false,tickfont:{size:11}},yaxis:{gridcolor:'rgba(0,86,58,.09)',range:[0,maxMonth+1],dtick:1,zeroline:false,tick0:0}}),cfg);
 }
 
 /* ---------- participantes ---------- */
@@ -363,13 +283,10 @@ $('#relatar-problema').onclick=()=>{
   const body=encodeURIComponent('Olá,\n\nGostaria de relatar um problema no sistema de controle de treinamentos.\n\nDetalhes:\n');
   window.location.href=`mailto:joaoantpereiramart@gmail.com?subject=${subject}&body=${body}`;
 };
-$('#selecionar-unidade').onclick=abrirGerenciarUnidades;
-$('#nova-unidade').onclick=criarNovaUnidade;
 $('#limpar').onclick=()=>{const d=$('#dlg');d.innerHTML=`<div class="dh"><b>Limpar todos os dados</b></div><div class="db"><p style="margin-top:0">Serão apagados <b>todos</b> os participantes, turmas, presenças e e-mails deste computador. A ação não pode ser desfeita.</p><input id="l-setor" placeholder="Nome do novo setor (ex.: Pronto Atendimento)" style="width:100%"><label style="display:flex;gap:8px;align-items:center;margin-top:14px;font-size:13.5px"><input type="checkbox" id="l-ok" style="min-width:auto"> Entendo que tudo será apagado</label></div><div class="df"><span class="err" id="l-e"></span><button class="b ghost" onclick="dlg.close()">Cancelar</button><button class="b" id="l-go" style="background:var(--bad);border-color:var(--bad)">Apagar tudo</button></div>`;
   d.showModal();$('#l-go').onclick=async()=>{if(!$('#l-ok').checked){$('#l-e').textContent='Marque a confirmação para continuar.';return}
     await api('/api/limpar',{m:'POST',b:{setor:$('#l-setor').value}});d.close();toast('Dados apagados');show('dashboard')}};
 
-ensureDefaultUnit();
 loadDash();
 </script>
 </body>

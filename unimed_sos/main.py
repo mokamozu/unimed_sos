@@ -3,7 +3,9 @@
 Execução:  uvicorn main:app --reload
 """
 import json
+import os
 import re
+import shutil
 import sqlite3
 import sys
 from contextlib import contextmanager
@@ -18,7 +20,15 @@ from pydantic import BaseModel
 
 # Recursos (static, seed) ficam dentro do programa; o banco fica em Documentos para facilitar o backup.
 BASE = Path(getattr(sys, "_MEIPASS", Path(__file__).parent))
-DATA_DIR = (Path.home() / "Documents" / "Controle Treinamentos SOS") if getattr(sys, "frozen", False) else BASE
+if getattr(sys, "frozen", False):
+    DATA_DIR = Path(os.environ.get("LOCALAPPDATA", Path.home() / "AppData" / "Local")) / "Controle Treinamentos SOS"
+    old_db = Path.home() / "Documents" / "Controle Treinamentos SOS" / "sos.db"
+    new_db = DATA_DIR / "sos.db"
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    if old_db.is_file() and not new_db.exists():
+        shutil.copy2(old_db, new_db)
+else:
+    DATA_DIR = BASE
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 DB_PATH = DATA_DIR / "sos.db"
 SEED = json.loads((BASE / "seed.json").read_text("utf-8"))

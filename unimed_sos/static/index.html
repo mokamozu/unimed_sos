@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Controle de Treinamentos | SOS Emergências Médicas</title>
+<link rel="icon" href="data:image/png;base64,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">
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<style>
+:root{--g950:#02281c;--g800:#00563a;--g600:#00995d;--g400:#4fbf8a;--g200:#bfe8d4;--g50:#f1faf5;
+--ink:#10281f;--mut:#5d7a6d;--warn:#b7791f;--bad:#b4412f;--glass:rgba(255,255,255,.62);--line:rgba(0,86,58,.14)}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);min-height:100vh;
+background:radial-gradient(900px 500px at 85% -10%,rgba(79,191,138,.35),transparent 60%),
+radial-gradient(700px 500px at -10% 90%,rgba(0,153,93,.18),transparent 60%),var(--g50);display:flex}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.5;
+background-image:radial-gradient(rgba(0,86,58,.10) 1px,transparent 1px);background-size:18px 18px}
+aside{width:248px;flex:none;background:linear-gradient(180deg,var(--g950),var(--g800));color:#fff;padding:26px 18px;
+display:flex;flex-direction:column;gap:6px;position:sticky;top:0;height:100vh;z-index:2}
+.brand{display:flex;gap:12px;align-items:center;margin-bottom:26px}
+.mark{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);position:relative}
+.mark::before,.mark::after{content:"";position:absolute;background:#fff;border-radius:2px;left:50%;top:50%;transform:translate(-50%,-50%)}
+.mark::before{width:18px;height:5px}.mark::after{width:5px;height:18px}
+.brand b{display:block;font-size:15px;letter-spacing:.2px}.brand small{opacity:.7;font-size:11.5px}
+nav button{all:unset;cursor:pointer;display:block;width:100%;padding:11px 14px;border-radius:10px;font-size:14px;opacity:.78;
+position:relative;transition:background .25s,opacity .25s,padding .25s}
+nav button:hover{background:rgba(255,255,255,.08);opacity:1}
+nav button.on{background:rgba(255,255,255,.14);opacity:1;padding-left:20px}
+nav button.on::before{content:"";position:absolute;left:8px;top:11px;bottom:11px;width:3px;border-radius:2px;background:var(--g400)}
+main{flex:1;padding:34px 40px;max-width:1280px;position:relative;z-index:1}
+h1{font-size:25px;margin:0 0 4px;font-weight:650}.sub{color:var(--mut);margin:0 0 24px;font-size:14px}
+section{display:none}section.on{display:block;animation:in .5s cubic-bezier(.2,.7,.2,1) both}
+@keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.grid{display:grid;gap:18px}.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.card{background:var(--glass);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);
+border:1px solid rgba(255,255,255,.8);box-shadow:0 10px 30px rgba(0,86,58,.09),inset 0 0 0 1px var(--line);border-radius:16px;padding:20px}
+.card h3{margin:0 0 10px;font-size:14px;color:var(--g800);font-weight:650;letter-spacing:.2px}
+.kpi .v{font-size:36px;font-weight:700;color:var(--g800);line-height:1.1;font-variant-numeric:tabular-nums}
+.kpi .l{font-size:12.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.kpi.bad .v{color:var(--bad)}.kpi{position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;
+background:repeating-linear-gradient(45deg,rgba(0,153,93,.14) 0 2px,transparent 2px 7px)}
+.banner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px;color:#fff;
+background:linear-gradient(120deg,rgba(0,86,58,.92),rgba(0,153,93,.85));border-radius:16px;padding:18px 22px}
+.banner small{opacity:.8;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.08em;font-size:11px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--mut);padding:10px 12px;border-bottom:1px solid var(--line)}
+td{padding:10px 12px;border-bottom:1px solid var(--line)}tbody tr{animation:in .45s both;animation-delay:calc(var(--i)*22ms)}
+tbody tr:hover{background:rgba(0,153,93,.07)}td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.tag{display:inline-block;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600;background:rgba(0,153,93,.13);color:var(--g800)}
+.tag.bad{background:rgba(180,65,47,.13);color:var(--bad)}.tag.warn{background:rgba(183,121,31,.15);color:var(--warn)}
+.tag.off{background:rgba(93,122,109,.15);color:var(--mut)}
+button.b,a.b{cursor:pointer;border:1px solid var(--g600);background:var(--g600);color:#fff;border-radius:10px;padding:9px 16px;font-size:13.5px;
+font-weight:600;transition:transform .15s,box-shadow .2s;text-decoration:none;display:inline-block}
+button.b:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,153,93,.3)}
+button.b.ghost{background:transparent;color:var(--g800);border-color:var(--line)}button.sm{padding:5px 11px;font-size:12.5px}
+input,select{font:inherit;font-size:14px;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.75);min-width:0}
+input:focus,select:focus{outline:2px solid var(--g400);outline-offset:1px}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}.bar input{flex:1;min-width:220px}
+.track{height:9px;border-radius:9px;background:rgba(0,86,58,.1);overflow:hidden;min-width:120px}
+.fill{height:100%;width:0;border-radius:9px;transition:width 1s cubic-bezier(.2,.7,.2,1);
+background:repeating-linear-gradient(45deg,rgba(255,255,255,.35) 0 4px,transparent 4px 8px),linear-gradient(90deg,var(--g400),var(--g600))}
+.fill.w{background:repeating-linear-gradient(45deg,rgba(255,255,255,.35) 0 4px,transparent 4px 8px),#d9a441}
+.fill.r{background:repeating-linear-gradient(45deg,rgba(255,255,255,.35) 0 4px,transparent 4px 8px),#c9604f}
+.chart{height:260px}.chart.fade{animation:pop .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.92) rotate(-4deg)}to{opacity:1;transform:none}}
+dialog{border:0;border-radius:18px;padding:0;width:min(760px,94vw);background:rgba(250,255,252,.96);box-shadow:0 30px 80px rgba(2,40,28,.35)}
+dialog::backdrop{background:rgba(2,40,28,.45);backdrop-filter:blur(3px)}dialog[open]{animation:pop .35s both}
+.dh{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.db{padding:16px 22px;max-height:60vh;overflow:auto}.df{padding:14px 22px;border-top:1px solid var(--line);display:flex;gap:10px;justify-content:flex-end;align-items:center}
+.prow{display:grid;grid-template-columns:1.6fr 130px 1.4fr;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.err{color:var(--bad);font-size:13px;margin-right:auto}
+#toast{position:fixed;bottom:24px;right:24px;background:var(--g950);color:#fff;padding:12px 18px;border-radius:12px;transform:translateY(90px);opacity:0;transition:.35s;z-index:9}
+#toast.on{transform:none;opacity:1}
+@media(max-width:860px){aside{display:none}main{padding:20px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+#rel{display:none}
+@page{margin:14mm}
+@media print{aside,.bar,button{display:none!important}body{background:#fff}
+body.rel-on aside,body.rel-on main,body.rel-on dialog,body.rel-on #toast{display:none!important}
+body.rel-on{display:block;background:#fff}body.rel-on::before{display:none}
+body.rel-on #rel{display:block;width:100%;color:#10281f;font-size:11.5px}
+#rel *{animation:none!important}
+#rel .rh{display:flex;justify-content:space-between;align-items:flex-end;background:#00563a;color:#fff;padding:14px 18px;border-radius:6px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+#rel .rh b{font-size:18px}
+#rel .rs{display:flex;gap:10px;margin:12px 0}#rel .rs div{flex:1;border:1px solid #9fcdb7;border-radius:6px;padding:8px 12px}
+#rel .rs b{display:block;font-size:20px;color:#00563a}
+#rel h2{font-size:14px;color:#00563a;border-bottom:2px solid #00995d;padding-bottom:3px;margin:16px 0 6px}
+#rel table{font-size:11px}#rel th{background:#e6f5ed;color:#00563a;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+#rel th,#rel td{padding:4px 8px;border-bottom:1px solid #cfe5da}#rel tr{break-inside:avoid}#rel thead{display:table-header-group}
+#rel .rn{font-size:10.5px;color:#5d7a6d;margin-top:14px}
+#rel .sig{margin-top:38px;width:280px;border-top:1px solid #10281f;padding-top:4px;font-size:11px}}
+</style>
+</head>
+<body>
+<aside>
+  <div class="brand"><div class="mark"></div><div><b>Controle de Treinamentos</b><small><span id="setor">SOS Emergências Médicas</span><br>Unimed Vitória</small></div></div>
+  <nav>
+    <button class="on" data-v="dashboard">Dashboard</button>
+    <button data-v="participantes">Participantes</button>
+    <button data-v="turmas">Turmas e Presença</button>
+    <button data-v="cobertura">Cobertura por Tema</button>
+  </nav>
+  <div style="margin-top:auto;display:grid;gap:10px">
+    <button class="b ghost" id="relatar-problema" style="width:100%;color:#fff;border-color:rgba(255,255,255,.35)">Relatar problema</button>
+    <button class="b ghost" id="nova-unidade" style="width:100%;color:#fff;border-color:rgba(255,255,255,.35)">Nova unidade</button>
+    <button class="b ghost" id="limpar" style="width:100%;color:#fff;border-color:rgba(255,255,255,.35)">Limpar todos os dados</button>
+  </div>
+</aside>
+<main>
+<section id="dashboard" class="on">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px"><div><h1>Painel de Conformidade</h1><p class="sub">Indicadores calculados em tempo real a partir dos lançamentos de presença.</p></div><button class="b" data-rel>Relatório para impressão</button></div>
+  <div class="banner"><div><small>Próximo treinamento</small><b id="prox-t">-</b><div id="prox-d" style="opacity:.85;font-size:13px"></div></div>
+    <a class="b ghost" id="mail" style="color:#fff;border-color:rgba(255,255,255,.5)" href="#">Notificar convocados</a></div>
+  <div class="grid g4" style="margin-bottom:18px" id="kpis"></div>
+  <div class="grid g3" style="margin-bottom:18px">
+    <div class="card"><h3>Situação da base ativa</h3><div id="c1" class="chart"></div></div>
+    <div class="card"><h3>Distribuição por função</h3><div id="c2" class="chart"></div></div>
+    <div class="card"><h3>Programa anual 2026, entregas por mês</h3><div id="c3" class="chart"></div></div>
+  </div>
+  <div class="card"><h3>Colaboradores sem nenhuma participação</h3>
+    <table><thead><tr><th>Nome</th><th>Matrícula</th><th>Função</th></tr></thead><tbody id="pend"></tbody></table></div>
+</section>
+<section id="participantes">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+    <div><h1>Participantes</h1><p class="sub">Base ativa, e-mails de contato e situação de treinamento.</p></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="b ghost" data-rel>Relatório para impressão</button><button class="b" id="novo">Novo participante</button></div></div>
+  <div class="bar"><input id="f-q" placeholder="Buscar por nome ou matrícula"><select id="f-c"><option value="">Todas as funções</option></select>
+    <select id="f-s"><option value="">Todas as situações</option><option value="T">Treinado</option><option value="P">Pendente</option><option value="X">Desligado</option></select></div>
+  <div class="card" style="padding:6px 10px;overflow-x:auto"><table><thead><tr><th>Nome</th><th>Matrícula</th><th>Função</th><th>E-mail</th><th class="n">Presenças</th><th>Situação</th><th></th></tr></thead><tbody id="tp"></tbody></table></div>
+</section>
+<section id="turmas">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px"><div><h1>Turmas e Presença</h1><p class="sub">Lançamento de frequência com justificativa obrigatória para ausências.</p></div><button class="b" id="nova-turma">Nova turma</button></div>
+  <div class="bar"><input id="t-q" placeholder="Buscar por tema ou instrutor"><select id="t-s"><option value="">Todos os status</option><option>Realizada</option><option>Agendada</option></select></div>
+  <div class="card" style="padding:6px 10px;overflow-x:auto"><table><thead><tr><th>Cód.</th><th>Tema</th><th>Data</th><th>Instrutores</th><th class="n">Presentes</th><th>Status</th><th></th></tr></thead><tbody id="tt"></tbody></table></div>
+</section>
+<section id="cobertura">
+  <h1>Cobertura por Tema</h1><p class="sub">Meta de 100% da base ativa em cada um dos temas do programa, do menor para o maior índice.</p>
+  <div class="card" style="padding:6px 10px;overflow-x:auto"><table><thead><tr><th>Tema</th><th class="n">Treinados</th><th class="n">Pendentes</th><th style="width:220px">Cobertura</th><th></th></tr></thead><tbody id="tc"></tbody></table></div>
+</section>
+</main>
+<div id="rel"></div><dialog id="dlg"></dialog><div id="toast"></div>
+<script>
+const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const api=async(u,o)=>{const r=await fetch(u,o&&{method:o.m,headers:{'Content-Type':'application/json'},body:JSON.stringify(o.b)});
+  if(!r.ok){const e=await r.json().catch(()=>({}));throw new Error(e.detail||'Erro na requisição')}return r.json()};
+const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2800)};
+const cap=s=>s.charAt(0)+s.slice(1).toLowerCase();
+const G=['rgba(0,153,93,.62)','rgba(79,191,138,.55)','rgba(0,86,58,.6)','rgba(191,232,212,.8)','rgba(2,40,28,.45)'];
+const lay=(x={})=>({margin:{t:8,r:8,b:36,l:36},paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{family:'Segoe UI',size:12,color:'#10281f'},...x});
+const cfg={displayModeBar:false,responsive:true};
+const tag=(t,c='')=>`<span class="tag ${c}">${esc(t)}</span>`;
+const rows=(el,html)=>{el.innerHTML=html.map((h,i)=>h.replace('<tr','<tr style="--i:'+Math.min(i,30)+'"')).join('')};
+const pctCls=p=>p>=100?'':p>=60?'w':'r';
+const UNIT_KEY='SOS_TREINAMENTOS_V2';
+const UNIT_LIST_KEY='SOS_TREINAMENTOS_V2_UNIDADES';
+const UNIT_ACTIVE_KEY='SOS_TREINAMENTOS_V2_UNIDADE_ATIVA';
+
+function readUnits(){
+  try{const raw=localStorage.getItem(UNIT_LIST_KEY);const data=raw?JSON.parse(raw):[];return Array.isArray(data)?data:[];}catch{return []}
+}
+function persistUnits(units){localStorage.setItem(UNIT_LIST_KEY, JSON.stringify(units));}
+function ensureDefaultUnit(){
+  const currentRaw=localStorage.getItem(UNIT_KEY);
+  let current={participantes:[],turmas:[],vazio:true,setor:'SOS Emergências Médicas'};
+  try{if(currentRaw) current=JSON.parse(currentRaw);}catch{}
+  const units=readUnits();
+  if(!units.length){
+    const perfil={id:'default',nome:'SOS Emergências Médicas',data:current};
+    persistUnits([perfil]);
+    localStorage.setItem(UNIT_ACTIVE_KEY, perfil.id);
+    localStorage.setItem(UNIT_KEY, JSON.stringify(perfil.data));
+    return;
+  }
+  const activeId=localStorage.getItem(UNIT_ACTIVE_KEY) || units[0].id;
+  const active=units.find(u=>u.id===activeId) || units[0];
+  localStorage.setItem(UNIT_ACTIVE_KEY, active.id);
+  localStorage.setItem(UNIT_KEY, JSON.stringify(active.data));
+}
+async function criarNovaUnidade(){
+  const d=$('#dlg');
+  d.innerHTML=`<div class="dh"><b>Nova unidade</b></div><div class="db" style="display:grid;gap:12px">
+    <input id="u-nome" placeholder="Nome da unidade" value="">
+    <label style="display:flex;gap:8px;align-items:center;font-size:13.5px"><input type="checkbox" id="u-clone" checked> Clonar os dados atuais para a nova unidade</label>
+  </div><div class="df"><span class="err" id="u-e"></span><button class="b ghost" onclick="dlg.close()">Cancelar</button><button class="b" id="u-ok">Criar unidade</button></div>`;
+  d.showModal();
+  $('#u-ok').onclick=async()=>{
+    const nome=($('#u-nome').value||'').trim() || 'Nova unidade';
+    try{
+      await api('/api/unidades',{m:'POST',b:{nome,clonar:$('#u-clone').checked}});
+      d.close();
+      toast('Nova unidade criada');
+      show('dashboard');
+    }catch(x){$('#u-e').textContent=x.message}
+  };
+}
+function count(el,to){if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=to;return}
+  const t0=performance.now();(function f(t){const k=Math.min((t-t0)/900,1);el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(t0)}
+function grow(root){root.querySelectorAll('.fill').forEach(f=>{f.style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>f.style.width=f.dataset.w+'%'))})}
+
+/* ---------- navegação ---------- */
+const views={dashboard:loadDash,participantes:loadPart,turmas:loadTurmas,cobertura:loadCob};
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>show(b.dataset.v));
+function show(v){document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+  document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===v));views[v]()}
+
+/* ---------- dashboard ---------- */
+async function loadDash(){
+  const d=await api('/api/dashboard'),k=d.kpis,pr=d.programa;$('#setor').textContent=d.setor;document.title='Controle de Treinamentos | '+d.setor;
+  $('#kpis').innerHTML=[['Base ativa',k.base,''],['Treinados',k.treinados,''],['Pendentes (zero treinos)',k.pendentes,'bad'],['Ex-colaboradores',k.ex,'']]
+    .map(([l,v,c])=>`<div class="card kpi ${c}"><div class="l">${l}</div><div class="v" data-to="${v}">0</div></div>`).join('');
+  document.querySelectorAll('.kpi .v').forEach(e=>count(e,+e.dataset.to));
+  const p=d.proxima;
+  $('#prox-t').textContent=p?`${p.code} - ${p.tema}`:'Nenhuma turma agendada';
+  $('#prox-d').textContent=p?`${p.data_txt} · ${k.pendentes} convocados prioritários · prazo final ${k.prazo}`:'';
+  const lista=d.pendentes.map((x,i)=>`${i+1}. ${x.nome} (${x.mat}) - ${x.cargo}`).join('\n');
+  $('#mail').href='mailto:?subject='+encodeURIComponent('Convocação de treinamento - '+(p?p.tema:''))+'&body='+encodeURIComponent('Convocados prioritários:\n'+lista);
+  rows($('#pend'),d.pendentes.map(x=>`<tr><td><b>${esc(x.nome)}</b></td><td>${esc(x.mat)}</td><td>${tag(x.cargo,'off')}</td></tr>`));
+  const pat=(s,fg)=>({shape:s,fgcolor:fg,bgcolor:'rgba(255,255,255,.55)',size:7,solidity:.45});
+  Plotly.newPlot('c1',[{type:'pie',hole:.62,labels:['Treinados','Pendentes'],values:[k.treinados,k.pendentes],sort:false,textinfo:'percent',
+    marker:{colors:['rgba(0,153,93,.75)','rgba(183,121,31,.6)'],pattern:pat(['','/'],'#00563a'),line:{color:'#fff',width:2}}}],lay({margin:{t:4,b:4,l:4,r:4},legend:{orientation:'h',y:-.05}}),cfg);
+  const pc={};d.pendentes.forEach(p=>pc[p.cargo]=(pc[p.cargo]||0)+1);
+  const cs=Object.entries(d.cargos).sort((a,b)=>b[1]-a[1]),nm=cs.map(c=>cap(c[0])),tr=cs.map(c=>c[1]-(pc[c[0]]||0)),pe=cs.map(c=>pc[c[0]]||0),mx=Math.max(...cs.map(c=>c[1]),1);
+  const lbl=a=>a.map(v=>v?String(v):'');
+  const serie=(name,col,pat)=>({type:'bar',orientation:'h',name,y:nm,x:nm.map(()=>0),text:nm.map(()=>''),textposition:'inside',insidetextanchor:'middle',hovertemplate:'%{y}<br>'+name+': %{x}<extra></extra>',
+    marker:{color:col,pattern:pat,line:{color:'rgba(255,255,255,.9)',width:1.5}},textfont:{color:'#02281c',size:13}});
+  Plotly.newPlot('c2',[serie('Treinados','rgba(0,153,93,.6)',{shape:'/',fgcolor:'rgba(0,86,58,.55)',bgcolor:'rgba(255,255,255,.35)',size:7,solidity:.3}),
+    serie('Pendentes','rgba(217,164,65,.55)',{shape:'.',fgcolor:'rgba(150,100,20,.6)',bgcolor:'rgba(255,255,255,.4)',size:6,solidity:.35})],
+    lay({barmode:'stack',bargap:.42,margin:{t:28,r:12,b:28,l:132},legend:{orientation:'h',y:1.13,x:0},
+      yaxis:{autorange:'reversed',showgrid:false,zeroline:false,ticks:''},xaxis:{range:[0,mx*1.08],gridcolor:'rgba(0,86,58,.08)',zeroline:false,tickformat:'d',dtick:mx>20?5:1}}),cfg)
+    .then(()=>Plotly.animate('c2',{data:[{x:tr,text:lbl(tr)},{x:pe,text:lbl(pe)}],traces:[0,1]},{transition:{duration:900,easing:'cubic-out'},frame:{duration:900}}));
+  const ms=Object.entries(pr.meses);
+  Plotly.newPlot('c3',[{type:'bar',name:'Realizadas',x:ms.map(m=>m[0].slice(0,3)),y:ms.map(()=>0),marker:{color:'rgba(0,153,93,.7)',pattern:{shape:'/',fgcolor:'#00563a',size:6,solidity:.3}}},
+    {type:'bar',name:'Pendentes',x:ms.map(m=>m[0].slice(0,3)),y:ms.map(()=>0),marker:{color:'rgba(191,232,212,.85)',pattern:{shape:'x',fgcolor:'#4fbf8a',size:6,solidity:.3}}}],
+    lay({barmode:'stack',legend:{orientation:'h',y:1.15},yaxis:{gridcolor:'rgba(0,86,58,.08)',range:[0,Math.max(...ms.map(m=>m[1][0]+m[1][1]),1)+1],dtick:1,zeroline:false}}),cfg)
+    .then(()=>Plotly.animate('c3',{data:[{y:ms.map(m=>m[1][0])},{y:ms.map(m=>m[1][1])}],traces:[0,1]},{transition:{duration:900,easing:'cubic-out'},frame:{duration:900}}));
+  $('#c1').classList.add('fade');
+}
+
+/* ---------- participantes ---------- */
+let PART=[];
+async function loadPart(){PART=await api('/api/participantes');
+  const cs=[...new Set(PART.map(p=>p.cargo))];$('#f-c').innerHTML='<option value="">Todas as funções</option>'+cs.map(c=>`<option>${esc(c)}</option>`).join('');drawPart()}
+function drawPart(){
+  const q=$('#f-q').value.toLowerCase(),c=$('#f-c').value,s=$('#f-s').value;
+  const l=PART.filter(p=>(!q||p.nome.toLowerCase().includes(q)||p.mat.includes(q))&&(!c||p.cargo===c)&&
+    (!s||(s==='X'?!p.ativo:p.ativo&&(s==='T'?p.presencas>0:p.presencas===0))));
+  rows($('#tp'),l.map(p=>`<tr><td><b>${esc(p.nome)}</b></td><td>${esc(p.mat)}</td><td>${tag(p.cargo,'off')}</td>
+    <td><input type="email" value="${esc(p.email)}" placeholder="nome@unimedvx.com.br" data-mat="${esc(p.mat)}" style="width:230px"></td>
+    <td class="n">${p.presencas}</td><td>${!p.ativo?tag('Desligado','off'):p.presencas?tag('Treinado'):tag('Pendente','bad')}</td>
+    <td>${p.ativo?`<button class="b ghost sm" data-off="${esc(p.mat)}">Desligar</button>`:''}</td></tr>`));
+}
+['#f-q','#f-c','#f-s'].forEach(s=>$(s).oninput=drawPart);
+$('#tp').addEventListener('change',async e=>{if(!e.target.dataset.mat)return;
+  try{await api('/api/participantes/'+e.target.dataset.mat,{m:'PATCH',b:{email:e.target.value}});toast('E-mail salvo')}catch(x){toast(x.message)}});
+$('#tp').addEventListener('click',async e=>{const m=e.target.dataset.off;if(!m||!confirm('Desligar este colaborador da base ativa? O histórico será preservado.'))return;
+  await api('/api/participantes/'+m,{m:'PATCH',b:{ativo:false}});toast('Colaborador desligado');loadPart()});
+$('#novo').onclick=()=>{const d=$('#dlg');d.innerHTML=`<div class="dh"><b>Novo participante</b></div><div class="db" style="display:grid;gap:12px">
+  <input id="n-n" placeholder="Nome completo"><input id="n-m" placeholder="Matrícula"><input id="n-c" list="cargos-l" placeholder="Função / Cargo"><datalist id="cargos-l">${[...new Set([...PART.map(p=>p.cargo),'ENFERMEIRO','TÉCNICO DE ENFERMAGEM','MOTORISTA SOCORRISTA','CONDUTOR'])].map(c=>`<option value="${esc(c)}">`).join('')}</datalist></div>
+  <div class="df"><span class="err" id="n-e"></span><button class="b ghost" onclick="dlg.close()">Cancelar</button><button class="b" id="n-ok">Salvar</button></div>`;
+  d.showModal();$('#n-ok').onclick=async()=>{try{await api('/api/participantes',{m:'POST',b:{nome:$('#n-n').value,mat:$('#n-m').value,cargo:$('#n-c').value.trim().toUpperCase()}});d.close();toast('Participante cadastrado');loadPart()}catch(x){$('#n-e').textContent=x.message}}};
+
+/* ---------- turmas ---------- */
+let TUR=[];
+async function loadTurmas(){TUR=await api('/api/turmas');drawTur()}
+function drawTur(){const q=$('#t-q').value.toLowerCase(),s=$('#t-s').value;
+  rows($('#tt'),TUR.filter(t=>(!q||(t.tema+t.instrutores+t.code).toLowerCase().includes(q))&&(!s||t.status===s)).map(t=>
+    `<tr><td><b>${esc(t.code)}</b></td><td>${esc(t.tema)}</td><td>${esc(t.data_txt)}</td><td>${esc(t.instrutores)}</td><td class="n">${t.presentes}</td>
+    <td>${tag(t.status,t.status==='Realizada'?'':'warn')}</td><td><button class="b sm" data-id="${t.id}">Lançar presença</button></td></tr>`))}
+['#t-q','#t-s'].forEach(s=>$(s).oninput=drawTur);
+$('#tt').addEventListener('click',async e=>{const id=e.target.dataset.id;if(!id)return;
+  const {turma:t,participantes:ps}=await api('/api/turmas/'+id),d=$('#dlg');
+  d.innerHTML=`<div class="dh"><div><b>${esc(t.code)} - ${esc(t.tema)}</b><div class="sub" style="margin:2px 0 0;font-size:12.5px">${esc(t.data_txt)}</div></div>
+    <button class="b ghost sm" id="all">Marcar todos presentes</button></div>
+    <div class="db">${ps.map(p=>`<div class="prow" data-mat="${esc(p.mat)}"><span>${esc(p.nome)}</span>
+    <select><option value="">Sem registro</option><option value="1"${p.presente===true?' selected':''}>Presente</option><option value="0"${p.presente===false?' selected':''}>Ausente</option></select>
+    <input placeholder="Justificativa (obrigatória se ausente)" value="${esc(p.justificativa)}"></div>`).join('')}</div>
+    <div class="df"><span class="err" id="a-e"></span><button class="b ghost" onclick="dlg.close()">Cancelar</button><button class="b" id="a-ok">Salvar frequência</button></div>`;
+  d.showModal();
+  $('#all').onclick=()=>d.querySelectorAll('.prow select').forEach(s=>s.value='1');
+  $('#a-ok').onclick=async()=>{const registros=[...d.querySelectorAll('.prow')].filter(r=>r.querySelector('select').value!=='')
+    .map(r=>({mat:r.dataset.mat,presente:r.querySelector('select').value==='1',justificativa:r.querySelector('input').value}));
+    try{await api(`/api/turmas/${id}/presenca`,{m:'PUT',b:{registros}});d.close();toast('Frequência salva');loadTurmas()}catch(x){$('#a-e').textContent=x.message}}});
+
+/* ---------- cobertura ---------- */
+async function loadCob(){const l=await api('/api/cobertura');
+  rows($('#tc'),l.map(c=>`<tr><td>${esc(c.tema)}</td><td class="n">${c.treinados}</td><td class="n">${c.pendentes}</td>
+    <td><div class="track"><div class="fill ${pctCls(c.pct)}" data-w="${c.pct}"></div></div></td>
+    <td>${tag(c.pct+'%',c.pct>=100?'':c.pct>=60?'warn':'bad')}</td></tr>`));grow($('#tc'))}
+
+/* ---------- relatório para impressão ---------- */
+async function relatorio(){
+  const r=await api('/api/relatorio'),pct=r.base?Math.round(100*r.treinados.length/r.base):0;
+  const tab=(l,com)=>l.length?`<table><thead><tr><th>#</th><th>Nome</th><th>Matrícula</th><th>Função</th>${com?'<th>Turmas frequentadas</th><th class="n">Presenças</th>':'<th>Situação</th>'}</tr></thead><tbody>${l.map((p,i)=>`<tr><td>${i+1}</td><td>${esc(p.nome)}</td><td>${esc(p.mat)}</td><td>${esc(cap(p.cargo))}</td>${com?`<td>${esc(p.turmas.join(', '))}</td><td class="n">${p.presencas}</td>`:'<td>Sem participação registrada</td>'}</tr>`).join('')}</tbody></table>`:'<p>Nenhum colaborador nesta situação.</p>';
+  $('#rel').innerHTML=`<div class="rh"><div><b>Relatório de Treinamentos</b><br>${esc(r.setor)} · Unimed Vitória</div><div>Emitido em ${esc(r.gerado)}</div></div>
+    <div class="rs"><div><b>${r.base}</b>Base ativa</div><div><b>${r.treinados.length}</b>Treinados (${pct}%)</div><div><b>${r.nao_treinados.length}</b>Não treinados (${100-pct}%)</div></div>
+    <h2>Colaboradores treinados (${r.treinados.length})</h2>${tab(r.treinados,true)}
+    <h2>Colaboradores não treinados (${r.nao_treinados.length})</h2>${tab(r.nao_treinados,false)}
+    <p class="rn">Treinado: colaborador ativo com ao menos uma presença registrada em 2026. Ex-colaboradores não estão incluídos. Prazo para regularização das pendências: ${esc(r.prazo)}.</p>
+    <div class="sig">Responsável pelo SOS Emergências Médicas</div>`;
+  document.body.classList.add('rel-on');
+  window.addEventListener('afterprint',()=>document.body.classList.remove('rel-on'),{once:true});
+  setTimeout(()=>window.print(),80);
+}
+document.querySelectorAll('[data-rel]').forEach(b=>b.onclick=relatorio);
+
+$('#nova-turma').onclick=()=>{const d=$('#dlg');d.innerHTML=`<div class="dh"><b>Nova turma</b></div><div class="db" style="display:grid;gap:12px"><input id="t-tema" placeholder="Tema do treinamento"><input id="t-data" type="date"><input id="t-ins" placeholder="Instrutor(es)"></div><div class="df"><span class="err" id="t-e"></span><button class="b ghost" onclick="dlg.close()">Cancelar</button><button class="b" id="t-ok">Salvar</button></div>`;
+  d.showModal();$('#t-ok').onclick=async()=>{try{await api('/api/turmas',{m:'POST',b:{tema:$('#t-tema').value,data:$('#t-data').value,instrutores:$('#t-ins').value}});d.close();toast('Turma criada');loadTurmas()}catch(x){$('#t-e').textContent=x.message}}};
+$('#relatar-problema').onclick=()=>{
+  const subject=encodeURIComponent('Relatar problema no Controle de Treinamentos');
+  const body=encodeURIComponent('Olá,\n\nGostaria de relatar um problema no sistema de controle de treinamentos.\n\nDetalhes:\n');
+  window.location.href=`mailto:joaoantpereiramart@gmail.com?subject=${subject}&body=${body}`;
+};
+$('#nova-unidade').onclick=criarNovaUnidade;
+$('#limpar').onclick=()=>{const d=$('#dlg');d.innerHTML=`<div class="dh"><b>Limpar todos os dados</b></div><div class="db"><p style="margin-top:0">Serão apagados <b>todos</b> os participantes, turmas, presenças e e-mails deste computador. A ação não pode ser desfeita.</p><input id="l-setor" placeholder="Nome do novo setor (ex.: Pronto Atendimento)" style="width:100%"><label style="display:flex;gap:8px;align-items:center;margin-top:14px;font-size:13.5px"><input type="checkbox" id="l-ok" style="min-width:auto"> Entendo que tudo será apagado</label></div><div class="df"><span class="err" id="l-e"></span><button class="b ghost" onclick="dlg.close()">Cancelar</button><button class="b" id="l-go" style="background:var(--bad);border-color:var(--bad)">Apagar tudo</button></div>`;
+  d.showModal();$('#l-go').onclick=async()=>{if(!$('#l-ok').checked){$('#l-e').textContent='Marque a confirmação para continuar.';return}
+    await api('/api/limpar',{m:'POST',b:{setor:$('#l-setor').value}});d.close();toast('Dados apagados');show('dashboard')}};
+
+ensureDefaultUnit();
+loadDash();
+</script>
+</body>
+</html>

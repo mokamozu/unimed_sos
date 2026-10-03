@@ -1,0 +1,1796 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Controle de Treinamentos | SOS Emergências Médicas</title>
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAVNElEQVR4nNVbe3BV1dX/rb33ua/cG/IgPEJ4higw4lgRHKU1RBGrzlCt4qMz4tei+KIiWOpY7UQ61n6OFfmsQqc+UCyOFG2FYitKhaDgg1FLnQJKIBqBkHfIvbmPc87e6/vj5B4SCZAQrHXdyUzOufvuvdfa673XIpwiYGaizSRRATf7LkQh3LT/pnF7knsmxxE/O6mTEzImM0KQKNKsY2lOB4gJARGwFam4Zt0YolBtWIR35lq5H5XFyrY/Neip3RnOHFloExRPY01EfCr2Tf2egUEABAgaAJhZXlF7xfmHnEMzEzpRkdTJ8drSES012DDYZbBmsGEICIABJgYEQJJAikCCII2EslUyJEO7cihnU3GweN2rI17dRkS6c10JwIDQL0L0jwAMmUV8aXzp4FcaX5nd7DTfkBTJiU7QgckYwAagYYiIO4lFIIDgvUD2BcDM7M1KYGYmCAgEAREUsGwLERP5pEgVvXBl5MqVdw25qx4AZvEsuYbW6P8oASq5UizGYgaBl9UtG7QqtWp+o9t4UyqUGuSmXSAFJkEaDNGJ3ckSmuGRzbBhiTBIhiTC6XBDnsp7+rLwZf+3eOjiBjCoEpW0mBabvi7Q941tgkIF3AAFUF5Tfsd+e/997aH2oTqhQZpcYhIgiD7P2xtgGAYbKCgRFYikI3WjAqN+vWX0licznPH31pcp+0aATpa/++DdE95KvrWsyWoqdzockEsugWSWl7928GRHG8uoQCSAgc7AqgpVcfujox7d2VUsewO92jAzE4FIkDAXVV/0PzVc83iH7Ighgf8s4kdtDMxgjShUVEfjZarsztdHv/6cqTQCD3i65ERTnHDjzExEBAsWn199/qO1Vu3CZCIJqaUGQZ4aTPoJDK2llpFoBMVO8ZLtY7ffbcMmZsaJzOVxCZBFnplVxb6KldXB6uvcVteVLCUTfzOnfixgsCGjA/kBNTIz8qUtY7bMJiIXDByPE9Qx52MmeoCImeWU6il/qQvVXe62uo6AsPjU+CCnFggkIJTT4jh78/deN2XPlBgzX0kPkD4eJ/R8igzCGgjrWktP+XTKS5+HP7/WtBqHiKyvFYlTBMzsqAJljUmPWb2tbNt1zmpHYlbPTlPP5mozpLhG6HN2n7OkNlJ7rWn79iAPAERkua2usze099rzdp+3RFwjdPnm8h711VEEmMWzJCrgXrLnktmHQocWOG2OQ/j2IJ8FAllum+vUhmoXVHxaMbuqosqdxbOOIkI3AlRypVhDa/Si/YtOr+bqZclE0ggjjqkn/ttBGqlSHSlTS7XLFu1fdPoaWqMrubIbztTt/z9B8Czms3edvaUuVDdVJMQpM3WyB3fhK7FAt/eaT9q97w4MzVGWRemirTvG77iA1hDhGhjAW5y6DJQg6OnV02/9LPDZcqfNcYnolJy+gMBhfRguuyA6sfVUpJArcmHQZ9e+R2Bm18qz1Gn2abdtHLvx910DKG83XpSGh9ofKlhxcMWuOMULhSO8vfcTBAnEdRy3FN6CcaFxHhFAMDAQEJ3RDkOQADNDkcKO1A481/wcclXuqeIEYyyDPM5rviN2x/ifDvtpCwCAwNkTFiDov+z+y8JUTqqI2sgFHdtH6C0oUmh2m/HDAT/Ew8MePur7xxoeAwAsGLTgqO8O2AewIb4B+SofLvcpvukJhLCFG8+PF72YfHEhCPd15hM0dXp7/OuDvy5a0bbi0wQSecIVRwtmX1eEQIpTKLFKsHHsRuTLfBgYMBgWWXgz/iaurrkaYODl0S9jRu4M2GyDQJCQaHAbML16OurdeoQo1H9xYLBRBjGOtc3Ln3f6/OL5jcxMgkASAF7veP3GTCyTT5p0f5EnkKfgGHiy5EkMVAMBeBwRoAAanAYs3L8QOZSDHJmDuw7chQPOAQQoAEkSDMYQawieKHkCmrWvLPsFBCKXdDqWzn+54+UbAWAapkkBQDOzaso0zXFTLhNTv+VekkSLbsEvh/wSU6NT4bLrI+ayi9v3347qTDUMGRg2qLFrcPOXNyNlUv7vXXYxLTYN9w6+Fy1uC9Qp0McEEm7a5aZM0xxmVlWo0gIEnrl35rnJYHIc0uD+JjMUKbS4LZiZOxPzB82HhoYk6Su9lc0r8XHqY5wRPgOjA6MxJjgGE8MT8WnqUzzf/DwEBDR7v9GssXDQQlyWexla3db+E4EgkAangqlxM/fOPBcEL6KbvHvyI3WRup+Zw8bFcQKkE4GAQIYzGGwNxptj38RgNbhz3SMS1apbYZEFBYVtHdsAwOcSzRq5MtcfmyVanVOHi/ZchCbdhCAF+6sPXMojVdxR/Nvt47YvEswsEyYxXWc0wP03ey67+N2w32GIGgLD5ih1ki/zERVROHDws/0/w90H7kbGZJAjcrohD3gE1dAYag3F4yWPw2Gn/3lshjAZg6RJTmdmKW47cNvYjMmMY5vRH/bPmrx7Bt+DabFpvtx3X5t9kzZ//3xU29XYZ+/Dgv2eGezJ3ElIOOxgeu503DP4HjS7zf0TBYJABkhyctxtB24bKz5Pfj7ZDbkh0nTSfKVIocltwvTYdCwYtAA22wBwlPY2MFCk8Pum32N162rkq3zkyTysbluNp5ufhiJ1FHt7SWFChjO4q+guXBy7GI1uY/+IoGF0UIf2ZvZOFq26dZIW+oSpo2OBgEDKpDAhNAEvjnwRAQogQAEoUiAQdGd+0sBAQmJD+wYs2L8AMRGDZg3DBhERwbwv5+Ef7f+AgOhGBAJBkUKQggiJEFaNXIWJoYlImdRJW2siYi00EiYxSWWQmcCa0UnoPkPWlS1UhXiw4UFkTAaWsHDYPYxr869FRawCBkd0Qb7Mx/rS9ahKVGFZ0zIAwI0FN6IiWoGgCPpIZxXgH5v/iLc73sYAOQA22wiJEAplIfZh30kh37lpYsNIuakJNH7n+F1tom0cOWRwkr4/gZDmNJImCYssJHQCE8ITsGnsJhSqwqOQips4LtxzIWrtWggSKJJF2Fy2GQWqwB+TJdru1G5cWH0hWnQLghSECxdhEUaYwv1xkAwHWOTpvN0CwCCjDQi9CNOOAQxGiEIoUkXIk3kYpAZhxYgVGKgG+jLsrWrgsIMbP78RO1M7ERRBWGShxq7BrJpZSOqkd1cI9gOl8eHxeGHUC4jKKApVIYpUESIU6Zd3SCBilyEgBgkNHYUBGP3L8mY3VO/U486iO3FO5BxfGRp4iCtSWNqwFK/HX8dAayA0a2jWKFSFeDf5LhYfWgxBAi67vh5w2MH02HTcUngL6pw6f75+AjEzNOsojfn3GE6apHdT2w/IsnZ5tBxrx6ztcUxVogpX1VyFEIWOOkFJEq26FX8o+QOuL7j+6B8z8IOaH2BLYgtiMtbvMJnBCFIQitkLWr6qAPtCkGzwExMxzC2ci5pMDRx2fDYWEGjX7Vh4YCEEhOcaszlqjpiI4f66+1FilaA4UIzO22JoaChSmFs4Fx+nPgYzQ0L2SQyOxTV0+r9Pz7SZtoCC8uVVQyOhE72eHPAoqkhBkIBjOj22LoTNRnUBChyFvL8ZIl8slFDw8SOA2QujAfhJlb5AVEa7HaohgwE0wFYWWQkSVAADJhBpaMREDBfGLkRf9Yyf3emBe7KpsOypHguON66rQu0rfJD8AAmTgPBu7BkEUkIllIZuIEkFbJgJRIYNgiKIs8JndVusp8W/yoI9bU5AQHRG2MwMtxe318dDsrdsn02sZOGT1Cdo5/ZsWM4kiYwxDSpIwVpSNA62V6pikYVGpxGVdZW9WuhEm0iZVLfTDMtwv+ftzboOO54odkKRVYQABfxEDSlCyAnVqjDCO4UQMwyZzvoUhiSJQlnoy+9XOSHLDcc7qayLfHH0Ypybcy4AoNFtxJq2NV4CtMtJZuc5FZkfAYG0SaMsVIbr8q+DZi/B9VTTU6h362GRBSZmIQQCCOxUURn9UGgBzZokSaQ5jVHBUXh2+LMAAQoKq1pW4eH6hzGvaB7mFs2FZo20m8ZPvvwJmnUzLLK8fJ93CQlmhhCe5p+eOx3ziuYBAJrdZrzY6sULPkHZI6iB8a2DIOErUMPGJ3hXUcrqiq7mMBt92mxjpDUSdwy8w//uz21/xn5nf1YJk9QSuTL3Q1WqSrdXJ6vTjnRCMN6CIQphYnii/+MSqwQuuxiihmB8cHy3jde79QhSEAICARGArW1IkhBGICiC2JXehfc63gOD8YX9BTQ0Wt1Wn9Oy5iwswjisDyNMYXToDggSMGwQlVEoKLhw0ea2+YTIrp8rc30z3Oa2ISACaNWtSJqkF2x1flx0sRwSQmREujRSul0tH728evzO8bvTgfRZSMMAENm4ncmzt1mPzmHHz+y2uq0YHxqPOQVzIIRAi9uCt+JvYU7hHAwLDMO6w+vwTPMzaHKbsK1jGxiMQ84hnBE6A7cPvB0GBu2mHWvb1uLWgbeiNFiKN9vfxCMNj+DOojtxQfQCVGeqsaRxCQ67hxEVUcwunI0p0SmIiihSnMKW+Basal3lEQsGiwYvwndzvot3Ot5BdbrajyS7BmMADIIQwUxw9/LRy6sBeCmxki9LeNgnw5yCHQU89bOprI1ml11mZn68/nHGh+AHDz7IWTiYOcj3H7jff2bD7GiHu8Kley7lJfVL/OcvMl/wDZ/f0G2Ma9xuz7WZ2m7PK5pWcN4/8/id+DvcE6xsXsnqI8W/PfTbbu/jbpwd4+1Hs+bvffY9LthRwCWflDglX5bwpN2THvF0BoDhavirKqPA4B7dP+ry6fouwxm47Pqc8WLri6jJ1HjcA8aknEk4bA77zk27aYfDDjRr2GzDwGB162p8lvnMZ9VGtxF/bfurnyOcHJmMHxX8CFOjU6GhUe/U44ydZ2B923o47OCavGswI3cGrs+/HhoaDjt4P/k+/pn+p5+J7goGRsiMRLEqftUjAINeKX3l/VA6tJtCRAQyYHTz1my2wcxeTq4TstpVkfI9wKVNS1Fj1/jJEJdd3/WVJLNOSLfnp1ueRnW62vMXIPBa+2tY374eihQkSShSmBCe4LNxjsjBsyOfRXmsHBZZCIogLs+9HDEVg4CARRaWNS7Dzw/8vCfrYhACRdKR3etK170PBqlylEsicsv3lD+TDCUfkSmpG3WjaNNtKBAFAICRwZGIyAjGBMf4ZrBVt6JVt3bTyvkqv1uqqjdeW67M7WYVIiKCqIh2G2Mb288nBCgABYWPkh8hgwwECzS5TSAm31oMt4b7B9iVAxhsrJClhmDIM0TklnO5EpuxWQPAjJwZzwfigVbLsmRdpo7/1v43CAjYbGPmgJn41/h/4eq8q+EYL8hZ374ejW4jXHaP+ZclVlYEsibNdP2wgYb2x7hwoaH9ORQpbE1s9bQ/vFD57Y638UTTE9jQvgEfpj7EMy3P4LA+DALBZhuLBi/C8uHLPTFj45lKBrNkGYqHWq/IueJ5ANiMzVp01vDK+4rvaywUhcsphygiIvqBQw/gjfY3EKAALLJQGixFWIYREAGsa1uH/63/XxSqQu+6S3g5QAWFAXKALxZBCiJIQZ/lYzLmiQsELFi+mxwREX9MmMJ+TlGRwnBrON5LvodfHfqVlz+UEcwfNB9rRq/Bo8MexU2FN6HFbcHDDQ+DQAhQAAPkANS5df48nVduWsYkDVFDls8vnt8IhiTKlrplr8cPPFTwXPtzu+IiXmhsA8NGXBC9AN+JfAcFqgDNbjO2J7dja2IrGIyyYBnKY+XQ8PTBa4dfw6TIJAxVQ0EgfJD8ABoaZ4bPhGGDuIljR2oHJoYnwrDn+HyU/AilgVIMsYYgQAHsyuxCxmRwXs55AIC0SWN9+3q06BacEz4H5+ecj6FyKFJIodapxc7UTuzK7ELSJHFp7qWoiFTgw8yHeLfjXcyIzfDEE2TWpdbBcZzmmwfcPP4Xw37hX4/7QpotGrik+pJbdwV3LXdbXZeIVMIkuik/iyxERdS3Ah2mo1s+IGVSfsATpjCIyM/gChIIUch/ZjAiIgKbbTjs+Kk1IkLSJAF4rm1MxqCg0GE6kOZ0Nx0ToADCIuzlHDqtjEUWQhRCwiSyOsotLCxUE+2Jt/197N97KJDIcsEar0TmzN1nbmkKNk2lBGkhhOwWR7PxkwtZje7nEVhDULZA/IibKqj777/6TKBuYXDWS8wqMX+eLpFl9jtm9vcjIT1XHOxzGAy0iRo5NDN06wfjPvBKZLqUzB2ZjcCVsyqZiMz3Y9+fE3WiHVpqMsZwV8XWNbOS9Rg1a1/pZf/vSQlmkyJffTYwRxRlp6eZnaOrr29guinZ7PgsZJVndl7XuJyRGQq5oY5psWlziMhUzqrsVkN8lJ3KsseVe66cvSO44/lke9IRLL51ZXIAYGCc8ICwVZYpu/GNsjdW9tRccZTnt4bW6PJN5Wpt2dqVJR0lj6kBymJ0UQLfEjAwjpVnWcUdxY9tLNu4snxTueqps+T4pbLXWPrcz859qSZc860qlTVsHJkvrdJU6er3TnvvOvtPdh9LZQnMs9g4lY54u+ztG0rt0tdkvrQMjPNNtQb0BggEZnZkvrTGpse+VlVWdYNdaQuexcdsrupTufy+wL7r7Db7v7JcnpjYJVerfKVKU6UvVY2tmk1ELp+gZ+C4yX8i4s4J3G2l264fmRm5JJQbUlpqAve+LeVrB4Z2pUuR3Ig6zT5tybtl717fG+SBXlyGZolgV9pi69itd5/unP7jWCAW5yhL5k5b900Bg5nZ5SjLAcEB8TPNmT+uGlN1t8OO6A3ywEk2Td178N4JG1Mbl9Vb9eV2woZwhQvgm2maygkgz86rujxy+e2/Kf7N19M01Q06W9OCFMS0mml37LP33ZcKpYa6CTfbPfa1t82xYiWjEtF0tG6UHPXrTWM3PWmzjfJN5aqqoqpPZaV932gF3EquFBmToQ2jNjw5Nzb3rJHuyIdyVW6DylPKhIxgwwzABR+pyj5J4M45XDbMHGKh8pSKqVjDCHfEQzfFbjprQ+mGJ21jUyVXir4iD/Sz5qqrZ7X00NLBa9NrZzfYDTd0UIfXOmsbIA3AnFzrLAsWFCKIgNc6GzbhTwaqgS9cVXTVyrtiXutsX1n+lBIA2e320Dx9MHNwZgd3VKR0ymueFl5CBBpglwFzJGNkYOAV7RIgASEFpJZQjkqGRGhXjsrZNCI8Yt3LxS//lzVPdwHuoX0+SEHcvP/mcXsyeybHdfzslJuakDbpESTIa5836QCBEBIhW5KMG2MagyJYG1bhnbnyP9M+///Ypwkw6WUiWwAAAABJRU5ErkJggg==">
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<style>
+:root{--g950:#02281c;--g800:#00563a;--g600:#00995d;--g400:#4fbf8a;--g200:#bfe8d4;--g50:#f1faf5;
+--ink:#10281f;--mut:#5d7a6d;--warn:#b7791f;--bad:#b4412f;--glass:rgba(255,255,255,.62);--line:rgba(0,86,58,.14)}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);min-height:100vh;
+background:radial-gradient(900px 500px at 85% -10%,rgba(79,191,138,.35),transparent 60%),
+radial-gradient(700px 500px at -10% 90%,rgba(0,153,93,.18),transparent 60%),var(--g50);display:flex}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.5;
+background-image:radial-gradient(rgba(0,86,58,.10) 1px,transparent 1px);background-size:18px 18px}
+aside{width:248px;flex:none;background:linear-gradient(180deg,var(--g950),var(--g800));color:#fff;padding:26px 18px;
+display:flex;flex-direction:column;gap:6px;position:sticky;top:0;height:100vh;z-index:2}
+.brand{display:flex;gap:12px;align-items:center;margin-bottom:26px}
+.mark{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);position:relative}
+.mark::before,.mark::after{content:"";position:absolute;background:#fff;border-radius:2px;left:50%;top:50%;transform:translate(-50%,-50%)}
+.mark::before{width:18px;height:5px}.mark::after{width:5px;height:18px}
+.brand b{display:block;font-size:15px;letter-spacing:.2px}.brand small{opacity:.7;font-size:11.5px}
+nav button{all:unset;cursor:pointer;display:block;width:100%;padding:11px 14px;border-radius:10px;font-size:14px;opacity:.78;
+position:relative;transition:background .25s,opacity .25s,padding .25s}
+nav button:hover{background:rgba(255,255,255,.08);opacity:1}
+nav button.on{background:rgba(255,255,255,.14);opacity:1;padding-left:20px}
+nav button.on::before{content:"";position:absolute;left:8px;top:11px;bottom:11px;width:3px;border-radius:2px;background:var(--g400)}
+main{flex:1;padding:34px 40px;max-width:1280px;position:relative;z-index:1}
+h1{font-size:25px;margin:0 0 4px;font-weight:650}.sub{color:var(--mut);margin:0 0 24px;font-size:14px}
+section{display:none}section.on{display:block;animation:in .5s cubic-bezier(.2,.7,.2,1) both}
+@keyframes in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.grid{display:grid;gap:18px}.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.card{background:var(--glass);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);
+border:1px solid rgba(255,255,255,.8);box-shadow:0 10px 30px rgba(0,86,58,.09),inset 0 0 0 1px var(--line);border-radius:16px;padding:20px}
+.card h3{margin:0 0 10px;font-size:14px;color:var(--g800);font-weight:650;letter-spacing:.2px}
+.kpi .v{font-size:36px;font-weight:700;color:var(--g800);line-height:1.1;font-variant-numeric:tabular-nums}
+.kpi .l{font-size:12.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.kpi.bad .v{color:var(--bad)}.kpi{position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;
+background:repeating-linear-gradient(45deg,rgba(0,153,93,.14) 0 2px,transparent 2px 7px)}
+.banner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px;color:#fff;
+background:linear-gradient(120deg,rgba(0,86,58,.92),rgba(0,153,93,.85));border-radius:16px;padding:18px 22px}
+.banner small{opacity:.8;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.08em;font-size:11px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--mut);padding:10px 12px;border-bottom:1px solid var(--line)}
+td{padding:10px 12px;border-bottom:1px solid var(--line)}tbody tr{animation:in .45s both;animation-delay:calc(var(--i)*22ms)}
+tbody tr:hover{background:rgba(0,153,93,.07)}td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.tag{display:inline-block;padding:2px 10px;border-radius:99px;font-size:12px;font-weight:600;background:rgba(0,153,93,.13);color:var(--g800)}
+.tag.bad{background:rgba(180,65,47,.13);color:var(--bad)}.tag.warn{background:rgba(183,121,31,.15);color:var(--warn)}
+.tag.off{background:rgba(93,122,109,.15);color:var(--mut)}
+button.b,a.b{cursor:pointer;border:1px solid var(--g600);background:var(--g600);color:#fff;border-radius:10px;padding:9px 16px;font-size:13.5px;
+font-weight:600;transition:transform .15s,box-shadow .2s;text-decoration:none;display:inline-block}
+button.b:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,153,93,.3)}
+button.b.ghost{background:transparent;color:var(--g800);border-color:var(--line)}button.sm{padding:5px 11px;font-size:12.5px}
+input,select{font:inherit;font-size:14px;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.75);min-width:0}
+input:focus,select:focus{outline:2px solid var(--g400);outline-offset:1px}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}.bar input{flex:1;min-width:220px}
+.track{height:9px;border-radius:9px;background:rgba(0,86,58,.1);overflow:hidden;min-width:120px}
+.fill{height:100%;width:0;border-radius:9px;transition:width 1s cubic-bezier(.2,.7,.2,1);
+background:repeating-linear-gradient(45deg,rgba(255,255,255,.35) 0 4px,transparent 4px 8px),linear-gradient(90deg,var(--g400),var(--g600))}
+.fill.w{background:repeating-linear-gradient(45deg,rgba(255,255,255,.35) 0 4px,transparent 4px 8px),#d9a441}
+.fill.r{background:repeating-linear-gradient(45deg,rgba(255,255,255,.35) 0 4px,transparent 4px 8px),#c9604f}
+.chart{height:260px}.chart.fade{animation:pop .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes pop{from{opacity:0;transform:scale(.92) rotate(-4deg)}to{opacity:1;transform:none}}
+dialog{border:0;border-radius:18px;padding:0;width:min(760px,94vw);background:rgba(250,255,252,.96);box-shadow:0 30px 80px rgba(2,40,28,.35)}
+dialog::backdrop{background:rgba(2,40,28,.45);backdrop-filter:blur(3px)}dialog[open]{animation:pop .35s both}
+.dh{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.db{padding:16px 22px;max-height:60vh;overflow:auto}.df{padding:14px 22px;border-top:1px solid var(--line);display:flex;gap:10px;justify-content:flex-end;align-items:center}
+.prow{display:grid;grid-template-columns:1.6fr 130px 1.4fr;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.err{color:var(--bad);font-size:13px;margin-right:auto}
+#toast{position:fixed;bottom:24px;right:24px;background:var(--g950);color:#fff;padding:12px 18px;border-radius:12px;transform:translateY(90px);opacity:0;transition:.35s;z-index:9}
+#toast.on{transform:none;opacity:1}
+@media(max-width:860px){aside{display:none}main{padding:20px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+#rel{display:none}
+@page{margin:14mm}
+@media print{aside,.bar,button{display:none!important}body{background:#fff}
+body.rel-on aside,body.rel-on main,body.rel-on dialog,body.rel-on #toast{display:none!important}
+body.rel-on{display:block;background:#fff}body.rel-on::before{display:none}
+body.rel-on #rel{display:block;width:100%;color:#10281f;font-size:11.5px}
+#rel *{animation:none!important}
+#rel .rh{display:flex;justify-content:space-between;align-items:flex-end;background:#00563a;color:#fff;padding:14px 18px;border-radius:6px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+#rel .rh b{font-size:18px}
+#rel .rs{display:flex;gap:10px;margin:12px 0}#rel .rs div{flex:1;border:1px solid #9fcdb7;border-radius:6px;padding:8px 12px}
+#rel .rs b{display:block;font-size:20px;color:#00563a}
+#rel h2{font-size:14px;color:#00563a;border-bottom:2px solid #00995d;padding-bottom:3px;margin:16px 0 6px}
+#rel table{font-size:11px}#rel th{background:#e6f5ed;color:#00563a;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+#rel th,#rel td{padding:4px 8px;border-bottom:1px solid #cfe5da}#rel tr{break-inside:avoid}#rel thead{display:table-header-group}
+#rel .rn{font-size:10.5px;color:#5d7a6d;margin-top:14px}
+#rel .sig{margin-top:38px;width:280px;border-top:1px solid #10281f;padding-top:4px;font-size:11px}}
+#boot{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:rgba(241,250,245,.85);backdrop-filter:blur(8px);color:#00563a;font-weight:600}#boot i{display:block;width:34px;height:34px;margin:0 auto 12px;border-radius:50%;border:3px solid rgba(0,153,93,.2);border-top-color:#00995d;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+</style>
+<script type="module" src="https://pyscript.net/releases/2024.11.1/core.js"></script>
+</head>
+<body>
+<aside>
+  <div class="brand"><div class="mark"></div><div><b>Controle de Treinamentos</b><small>SOS Emergências Médicas<br>Unimed Vitória</small></div></div>
+  <nav>
+    <button class="on" data-v="dashboard">Dashboard</button>
+    <button data-v="participantes">Participantes</button>
+    <button data-v="turmas">Turmas e Presença</button>
+    <button data-v="cobertura">Cobertura por Tema</button>
+  </nav>
+</aside>
+<main>
+<section id="dashboard" class="on">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px"><div><h1>Painel de Conformidade</h1><p class="sub">Indicadores calculados em tempo real a partir dos lançamentos de presença.</p></div><button class="b" data-rel>Relatório para impressão</button></div>
+  <div class="banner"><div><small>Próximo treinamento</small><b id="prox-t">-</b><div id="prox-d" style="opacity:.85;font-size:13px"></div></div>
+    <a class="b ghost" id="mail" style="color:#fff;border-color:rgba(255,255,255,.5)" href="#">Notificar convocados</a></div>
+  <div class="grid g4" style="margin-bottom:18px" id="kpis"></div>
+  <div class="grid g3" style="margin-bottom:18px">
+    <div class="card"><h3>Situação da base ativa</h3><div id="c1" class="chart"></div></div>
+    <div class="card"><h3>Distribuição por função</h3><div id="c2" class="chart"></div></div>
+    <div class="card"><h3>Programa anual 2026, entregas por mês</h3><div id="c3" class="chart"></div></div>
+  </div>
+  <div class="card"><h3>Colaboradores sem nenhuma participação</h3>
+    <table><thead><tr><th>Nome</th><th>Matrícula</th><th>Função</th></tr></thead><tbody id="pend"></tbody></table></div>
+</section>
+<section id="participantes">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
+    <div><h1>Participantes</h1><p class="sub">Base ativa, e-mails de contato e situação de treinamento.</p></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="b ghost" data-rel>Relatório para impressão</button><button class="b" id="novo">Novo participante</button></div></div>
+  <div class="bar"><input id="f-q" placeholder="Buscar por nome ou matrícula"><select id="f-c"><option value="">Todas as funções</option></select>
+    <select id="f-s"><option value="">Todas as situações</option><option value="T">Treinado</option><option value="P">Pendente</option><option value="X">Desligado</option></select></div>
+  <div class="card" style="padding:6px 10px;overflow-x:auto"><table><thead><tr><th>Nome</th><th>Matrícula</th><th>Função</th><th>E-mail</th><th class="n">Presenças</th><th>Situação</th><th></th></tr></thead><tbody id="tp"></tbody></table></div>
+</section>
+<section id="turmas">
+  <h1>Turmas e Presença</h1><p class="sub">Lançamento de frequência com justificativa obrigatória para ausências.</p>
+  <div class="bar"><input id="t-q" placeholder="Buscar por tema ou instrutor"><select id="t-s"><option value="">Todos os status</option><option>Realizada</option><option>Agendada</option></select></div>
+  <div class="card" style="padding:6px 10px;overflow-x:auto"><table><thead><tr><th>Cód.</th><th>Tema</th><th>Data</th><th>Instrutores</th><th class="n">Presentes</th><th>Status</th><th></th></tr></thead><tbody id="tt"></tbody></table></div>
+</section>
+<section id="cobertura">
+  <h1>Cobertura por Tema</h1><p class="sub">Meta de 100% da base ativa em cada um dos temas do programa, do menor para o maior índice.</p>
+  <div class="card" style="padding:6px 10px;overflow-x:auto"><table><thead><tr><th>Tema</th><th class="n">Treinados</th><th class="n">Pendentes</th><th style="width:220px">Cobertura</th><th></th></tr></thead><tbody id="tc"></tbody></table></div>
+</section>
+</main>
+<div id="rel"></div><dialog id="dlg"></dialog><div id="toast"></div>
+<div id="boot"><div style="text-align:center"><i></i>Carregando motor Python...</div></div>
+<script id="seed" type="application/json">{
+ "config": {
+  "email": "wmartins@unimedvx.com.br",
+  "alertDays": 30,
+  "deadline": "31/12/2026"
+ },
+ "participantes": [
+  {
+   "id": 1,
+   "nome": "Wallyson Marck Martins",
+   "mat": "64348",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 2,
+   "nome": "Renato Suhet de Carvalho",
+   "mat": "3183",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 3,
+   "nome": "Wesley Correia Benedito",
+   "mat": "70952",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 4,
+   "nome": "Luís Fernando Vieira Costa",
+   "mat": "72174",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 5,
+   "nome": "Marcelo A do Nascimento",
+   "mat": "62406",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 6,
+   "nome": "Daniel Siqueira Xavier",
+   "mat": "60360",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 7,
+   "nome": "Renato Chiqueto dos Anjos",
+   "mat": "71655",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 8,
+   "nome": "Johnny Santos Valvassori",
+   "mat": "62271",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 9,
+   "nome": "Zaqueu Rodrigues Pimentel",
+   "mat": "69962",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 10,
+   "nome": "Alexandre Diego dos Reis",
+   "mat": "71285",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 11,
+   "nome": "André Alonso Justino",
+   "mat": "62454",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 12,
+   "nome": "Abraão Nascimento Oliveira",
+   "mat": "69804",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 13,
+   "nome": "Carlos Eduardo de Moraes",
+   "mat": "71753",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 14,
+   "nome": "Thales Henrique Gomes Ferreira",
+   "mat": "72170",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 15,
+   "nome": "Thiago Rocha Loureiro",
+   "mat": "72267",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 16,
+   "nome": "Ivanilton Rocha dos Santos",
+   "mat": "72139",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 17,
+   "nome": "Bernado Xavier da Silva",
+   "mat": "72137",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 18,
+   "nome": "Izaias Furechi de Souza",
+   "mat": "71770",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 19,
+   "nome": "Vinícius Ribeiro Sousa",
+   "mat": "72511",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 20,
+   "nome": "Valquimar de Araujo Borges",
+   "mat": "71757",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 21,
+   "nome": "Marcelo Teixeira Rosa",
+   "mat": "71797",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 22,
+   "nome": "Paulo Correia Bomfim",
+   "mat": "70099",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 23,
+   "nome": "Júlio César Santana Piovanelli Ma",
+   "mat": "70409",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 24,
+   "nome": "Douglas Alves de Abreu",
+   "mat": "71861",
+   "cargo": "ENFERMEIRO"
+  },
+  {
+   "id": 25,
+   "nome": "Wanderson dos S. Martins",
+   "mat": "61114",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 26,
+   "nome": "Ricardo dos Santos Pereira",
+   "mat": "65609",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 27,
+   "nome": "Thais Silva Santos Neves",
+   "mat": "70601",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 28,
+   "nome": "Ivanildo Silva Neris",
+   "mat": "64778",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 29,
+   "nome": "Nathan de Jesus Silva Paes",
+   "mat": "69587",
+   "cargo": "TÉCNICO DE ENFERMAGEM",
+   "isEx": true
+  },
+  {
+   "id": 30,
+   "nome": "Bruno Santana de Souza",
+   "mat": "70586",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 31,
+   "nome": "Ronaldo da Silva Carvalho",
+   "mat": "67273",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 32,
+   "nome": "Jader Camargo dos Reis",
+   "mat": "68738",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 33,
+   "nome": "Marcos Antonio Rocha do Nascimento",
+   "mat": "71364",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 34,
+   "nome": "Marcelo Bispo Rodrigues",
+   "mat": "68588",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 35,
+   "nome": "Felipe Ribeiro do Nascimento",
+   "mat": "66916",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 36,
+   "nome": "Marcelo",
+   "mat": "70987",
+   "cargo": "TÉCNICO DE ENFERMAGEM"
+  },
+  {
+   "id": 37,
+   "nome": "Silas Abreu da Costa",
+   "mat": "63240",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 38,
+   "nome": "Leandro Rodrigues Faria",
+   "mat": "69612",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 39,
+   "nome": "Jackson Pereira",
+   "mat": "70475",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 40,
+   "nome": "Whofferson Rossi da Costa",
+   "mat": "71915",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 41,
+   "nome": "Daniel Teixeira Gaspar",
+   "mat": "64317",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 42,
+   "nome": "Adimilson Pinto Duarte",
+   "mat": "62278",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 43,
+   "nome": "Jefferson Sa de Almeida",
+   "mat": "69626",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 44,
+   "nome": "Wanderson Dias de Oliveira",
+   "mat": "63232",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 45,
+   "nome": "Maic Neves de Matos",
+   "mat": "71246",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 46,
+   "nome": "Batista De Oliveira Rodrigues",
+   "mat": "71124",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 47,
+   "nome": "Augustinho Nascimento",
+   "mat": "60450",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 48,
+   "nome": "Willian Monteiro Pereira",
+   "mat": "72144",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 49,
+   "nome": "Renato Borges",
+   "mat": "3092",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 50,
+   "nome": "Kleuber Rodrigues Camara",
+   "mat": "72375",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 51,
+   "nome": "Flavio Pereira do Nascimento",
+   "mat": "65798",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 52,
+   "nome": "Marcelo Vaz Bezerra",
+   "mat": "72177",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 53,
+   "nome": "Luiz Heitor Pinto de Araujo",
+   "mat": "71709",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 54,
+   "nome": "Niquifaldo de Lima Casimiro",
+   "mat": "72128",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 55,
+   "nome": "Luis Claudio Miranda",
+   "mat": "71509",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 56,
+   "nome": "Weglay Moraes Bezerra",
+   "mat": "71458",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 57,
+   "nome": "Adson Gomes De Souza",
+   "mat": "66794",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 58,
+   "nome": "Ricardo Christ Mattos",
+   "mat": "68862",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 59,
+   "nome": "Raphael Sezine Gama Preisigke",
+   "mat": "70812",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 60,
+   "nome": "Carlos Henrique Mazega",
+   "mat": "65861",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 61,
+   "nome": "Wendel Pinheiro Silva",
+   "mat": "69502",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 62,
+   "nome": "Romerio Paiva Maziole",
+   "mat": "71936",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 63,
+   "nome": "Eduardo Moura de Lima",
+   "mat": "71560",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 64,
+   "nome": "Daurio Lennon Rocha Hoffmann",
+   "mat": "72015",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 65,
+   "nome": "Hudson Romulo Pimentel",
+   "mat": "72033",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 66,
+   "nome": "Thiago Ferreira da Silva",
+   "mat": "69378",
+   "cargo": "MOTORISTA SOCORRISTA"
+  },
+  {
+   "id": 67,
+   "nome": "Wanderson Carvalho",
+   "mat": "68990",
+   "cargo": "CONDUTOR"
+  },
+  {
+   "id": 68,
+   "nome": "Fabio Santa Clara",
+   "mat": "71504",
+   "cargo": "CONDUTOR"
+  },
+  {
+   "id": 69,
+   "nome": "Hugo Salles",
+   "mat": "68236",
+   "cargo": "A CONFIRMAR"
+  },
+  {
+   "id": 70,
+   "nome": "Anderson Coutinho",
+   "mat": "70421",
+   "cargo": "A CONFIRMAR"
+  }
+ ],
+ "turmas": [
+  {
+   "id": 1,
+   "code": "T1",
+   "tema": "Oxigenoterapia em Transporte",
+   "data": "14-15/02/2026",
+   "instrutores": "Marcelo Alcantara e Andre Alonso",
+   "status": "Realizada",
+   "presentes": [
+    "60360",
+    "69612",
+    "68738",
+    "68990",
+    "68236",
+    "71504",
+    "68862",
+    "70987",
+    "71124",
+    "71509",
+    "71364",
+    "69626",
+    "64348",
+    "61114",
+    "63240",
+    "70421",
+    "70952",
+    "70099",
+    "3092",
+    "69378",
+    "69502",
+    "71246",
+    "71458",
+    "64778",
+    "70475",
+    "69962",
+    "70586",
+    "69804",
+    "60450",
+    "62278"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 2,
+   "code": "T2",
+   "tema": "Simulação de Broncoaspiração",
+   "data": "14-15/02/2026",
+   "instrutores": "Marcelo Alcantara",
+   "status": "Realizada",
+   "presentes": [
+    "60360",
+    "69612",
+    "68738",
+    "68990",
+    "68236",
+    "71504",
+    "68862",
+    "70987",
+    "71124",
+    "71509",
+    "71364",
+    "70099",
+    "63232",
+    "3092",
+    "71458",
+    "71246",
+    "69962",
+    "70475",
+    "69502",
+    "69378",
+    "64778",
+    "70586",
+    "69804",
+    "60450",
+    "62278"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 3,
+   "code": "T3",
+   "tema": "Simulação e Análise de Quase Acidentes",
+   "data": "14-15/02/2026",
+   "instrutores": "Andre Alonso",
+   "status": "Realizada",
+   "presentes": [
+    "60360",
+    "69612",
+    "68738",
+    "68990",
+    "68236",
+    "71504",
+    "68862",
+    "62406",
+    "71124",
+    "71509",
+    "71364",
+    "70099",
+    "71458",
+    "71246",
+    "69962",
+    "70475",
+    "69502",
+    "69378",
+    "64778",
+    "70586",
+    "69804",
+    "60450",
+    "62278"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 4,
+   "code": "T4",
+   "tema": "Identificação Precoce de Sepse",
+   "data": "08/03/2026",
+   "instrutores": "Johnny Santos",
+   "status": "Realizada",
+   "presentes": [
+    "64348",
+    "68236",
+    "70987",
+    "71364"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 5,
+   "code": "T5",
+   "tema": "Manejo de Pacientes Frágeis e Vulneráveis",
+   "data": "07/03/2026",
+   "instrutores": "Marcelo Alcantara e Andre Alonso",
+   "status": "Realizada",
+   "presentes": [
+    "64317",
+    "69378",
+    "60360",
+    "70586",
+    "64778",
+    "69587",
+    "71458",
+    "71509",
+    "71560",
+    "65609",
+    "71246",
+    "62278",
+    "70099",
+    "63232"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 6,
+   "code": "T6",
+   "tema": "Documentação de Dispositivos e Acessos: Prevenção de Erros",
+   "data": "09-10/05/2026",
+   "instrutores": "Andre Alonso, Johnny Santos e Marcelo Alcantara",
+   "status": "Realizada",
+   "presentes": [
+    "69804",
+    "64778",
+    "70586",
+    "3183",
+    "70952",
+    "69587"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 7,
+   "code": "T7",
+   "tema": "Segurança em Ambientes Confinados",
+   "data": "09-10/05/2026",
+   "instrutores": "Andre Alonso e Marcelo Alcantara",
+   "status": "Realizada",
+   "presentes": [
+    "69804",
+    "71246",
+    "60450",
+    "63232",
+    "69587",
+    "62278",
+    "71560",
+    "72033",
+    "72015",
+    "71124",
+    "64778",
+    "70586",
+    "69378",
+    "3183",
+    "63240",
+    "71458",
+    "66794",
+    "65609",
+    "64348"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 8,
+   "code": "T8",
+   "tema": "Gerenciamento de Resíduos Contaminados e Perfurocortantes",
+   "data": "09-10/05/2026",
+   "instrutores": "Marcelo Alcantara e Andre Alonso",
+   "status": "Realizada",
+   "presentes": [
+    "71915",
+    "60360",
+    "68236",
+    "71509",
+    "71364",
+    "68862",
+    "70987",
+    "69804",
+    "71246",
+    "60450",
+    "63232",
+    "69587",
+    "62278",
+    "71560",
+    "72033",
+    "72015",
+    "71124",
+    "64778",
+    "70586",
+    "69378",
+    "3183",
+    "63240"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 9,
+   "code": "T9",
+   "tema": "Prevenção de Quedas Durante Transferências",
+   "data": "20/06/2026",
+   "instrutores": "Marcelo Alcantara",
+   "status": "Realizada",
+   "presentes": [
+    "69962",
+    "66794",
+    "72177",
+    "65609",
+    "60360",
+    "68862",
+    "72144"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 10,
+   "code": "T10",
+   "tema": "Técnicas de Mobilização Segura",
+   "data": "20/06/2026",
+   "instrutores": "Marcelo Alcantara",
+   "status": "Realizada",
+   "presentes": [
+    "69962",
+    "72144",
+    "66794",
+    "72177",
+    "65609",
+    "60360",
+    "68862"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 11,
+   "code": "T11",
+   "tema": "Gerenciamento de Resíduos Contaminados e Perfurocortantes",
+   "data": "11-12/07/2026",
+   "instrutores": "Marcelo Alcantara e Andre Alonso",
+   "status": "Realizada",
+   "presentes": [
+    "72015",
+    "72033",
+    "60360",
+    "70586",
+    "71915",
+    "65609",
+    "71560",
+    "69378",
+    "67273",
+    "64778",
+    "71753",
+    "71124",
+    "62278",
+    "71246",
+    "3092",
+    "72144",
+    "71655",
+    "63232"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 12,
+   "code": "T12",
+   "tema": "Farmacologia em Emergências",
+   "data": "11-12/07/2026",
+   "instrutores": "Marcelo Alcantara e Andre Alonso",
+   "status": "Realizada",
+   "presentes": [
+    "60360",
+    "70586",
+    "65609",
+    "67273",
+    "64778",
+    "71753",
+    "69962",
+    "69804",
+    "71655"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 13,
+   "code": "T13",
+   "tema": "Contenção Não-Traumática",
+   "data": "22-23/08/2026",
+   "instrutores": "Marcelo Alcantara, Andre Alonso e Johnny Santos",
+   "status": "Realizada",
+   "presentes": [
+    "72015",
+    "71560",
+    "61114",
+    "65798",
+    "68862",
+    "67273",
+    "70586",
+    "64778",
+    "72033",
+    "72174",
+    "71915",
+    "71458",
+    "68738",
+    "69804",
+    "68236",
+    "66794",
+    "71509",
+    "72170",
+    "72177",
+    "72128",
+    "71364",
+    "71753",
+    "60450",
+    "72144",
+    "3092",
+    "71655",
+    "63232"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 14,
+   "code": "T14",
+   "tema": "Prevenção de Quedas",
+   "data": "22-23/08/2026",
+   "instrutores": "Marcelo Alcantara, Andre Alonso e Johnny Santos",
+   "status": "Realizada",
+   "presentes": [
+    "72015",
+    "71560",
+    "61114",
+    "65798",
+    "68862",
+    "67273",
+    "70586",
+    "64778",
+    "72033",
+    "72174",
+    "71915",
+    "68738",
+    "71458",
+    "69804",
+    "68236",
+    "66794",
+    "71509",
+    "72170",
+    "72177",
+    "72128",
+    "71364",
+    "60450",
+    "62278",
+    "71753",
+    "72144",
+    "71655",
+    "3092",
+    "63232"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 15,
+   "code": "T15",
+   "tema": "Checklist de Segurança Pré-Atendimento",
+   "data": "18-19/04/2026",
+   "instrutores": "Marcelo Alcantara, Andre Alonso e Johnny Santos",
+   "status": "Realizada",
+   "presentes": [
+    "71246",
+    "69378",
+    "71915",
+    "60360",
+    "64778",
+    "71509",
+    "72033",
+    "65798",
+    "69502",
+    "71753",
+    "72015",
+    "70586",
+    "65609",
+    "69587",
+    "71560",
+    "69804",
+    "62278",
+    "63232",
+    "70409",
+    "61114",
+    "66794",
+    "71861",
+    "71124",
+    "71458",
+    "70987",
+    "71364",
+    "71709",
+    "3092"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 16,
+   "code": "T16",
+   "tema": "Manejo de Surtos Psiquiátricos",
+   "data": "18-19/04/2026",
+   "instrutores": "Marcelo Alcantara, Andre Alonso e Johnny Santos",
+   "status": "Realizada",
+   "presentes": [
+    "71246",
+    "69378",
+    "71915",
+    "60360",
+    "64778",
+    "71509",
+    "72033",
+    "69804",
+    "62278",
+    "63232",
+    "70409",
+    "61114",
+    "66794",
+    "71861",
+    "71124",
+    "3092",
+    "71458",
+    "70987",
+    "71364",
+    "71709"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 17,
+   "code": "T17",
+   "tema": "Simulação de Falha de Equipamento Crítico e Plano de Contingência",
+   "data": "18-19/04/2026",
+   "instrutores": "Marcelo Alcantara, Andre Alonso e Johnny Santos",
+   "status": "Realizada",
+   "presentes": [
+    "60360",
+    "64778",
+    "71753",
+    "70586",
+    "65609",
+    "69587",
+    "65798",
+    "69502",
+    "72015",
+    "71560",
+    "69804",
+    "62278",
+    "63232",
+    "70409",
+    "69378",
+    "71915",
+    "61114",
+    "66794",
+    "71861",
+    "71124",
+    "71458",
+    "70987",
+    "71364",
+    "71709"
+   ],
+   "justificativas": {}
+  },
+  {
+   "id": 18,
+   "code": "T18",
+   "tema": "Comunicação e Handoff (Passagem de Plantão)",
+   "data": "10/10/2026",
+   "instrutores": "Equipe de Educação Continuada",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 19,
+   "code": "T19",
+   "tema": "Lavagem das Mãos",
+   "data": "17/10/2026",
+   "instrutores": "Comissão CCIH",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 20,
+   "code": "T20",
+   "tema": "Segregação de Resíduos",
+   "data": "24/10/2026",
+   "instrutores": "Equipe de Qualidade",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 21,
+   "code": "T21",
+   "tema": "Workshop de PCR em Idosos",
+   "data": "31/10/2026",
+   "instrutores": "Marcelo Alcantara e Coordenação",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 22,
+   "code": "T22",
+   "tema": "Monitorização Pré-Hospitalar",
+   "data": "07/11/2026",
+   "instrutores": "Andre Alonso",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 23,
+   "code": "T23",
+   "tema": "Ética e Legislação",
+   "data": "14/11/2026",
+   "instrutores": "Assessoria Jurídica / Coordenação",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 24,
+   "code": "T24",
+   "tema": "Treino Multidisciplinar",
+   "data": "21/11/2026",
+   "instrutores": "Instrutores SOS",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 25,
+   "code": "T25",
+   "tema": "Reposição – Temas de Fevereiro e Março (Oxigenoterapia, Broncoaspiração, Quase Acidentes, Frágeis, Sepse)",
+   "data": "21/11/2026",
+   "instrutores": "Marcelo Alcantara e Johnny Santos",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 26,
+   "code": "T26",
+   "tema": "Protocolos de Aspiração de Vias Aéreas",
+   "data": "28/11/2026",
+   "instrutores": "Marcelo Alcantara",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 27,
+   "code": "T27",
+   "tema": "Evolução de Enfermagem",
+   "data": "05/12/2026",
+   "instrutores": "Johnny Santos",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 28,
+   "code": "T28",
+   "tema": "Módulo de \"Cultura Justa\" e Relato de Incidentes e Eventos Adversos",
+   "data": "12/12/2026",
+   "instrutores": "Gerência de Qualidade",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  },
+  {
+   "id": 29,
+   "code": "T29",
+   "tema": "Reposição – Temas de Abril a Agosto (Checklist, Surtos, Falha, Confinados, Resíduos, etc.)",
+   "data": "12/12/2026",
+   "instrutores": "Equipe de Educação SOS",
+   "status": "Agendada",
+   "presentes": [],
+   "justificativas": {}
+  }
+ ],
+ "topics": [
+  "Oxigenoterapia em Transporte",
+  "Simulação de Broncoaspiração",
+  "Simulação e Análise de Quase Acidentes",
+  "Identificação Precoce de Sepse",
+  "Manejo de Pacientes Frágeis e Vulneráveis",
+  "Documentação de Dispositivos e Acessos: Prevenção de Erros",
+  "Segurança em Ambientes Confinados",
+  "Gerenciamento de Resíduos Contaminados e Perfurocortantes",
+  "Prevenção de Quedas Durante Transferências",
+  "Técnicas de Mobilização Segura",
+  "Farmacologia em Emergências",
+  "Contenção Não-Traumática",
+  "Prevenção de Quedas",
+  "Checklist de Segurança Pré-Atendimento",
+  "Manejo de Surtos Psiquiátricos",
+  "Simulação de Falha de Equipamento Crítico e Plano de Contingência",
+  "Comunicação e Handoff (Passagem de Plantão)",
+  "Workshop de PCR em Idosos",
+  "Lavagem das Mãos",
+  "Monitorização Pré-Hospitalar",
+  "Ética e Legislação",
+  "Treino Multidisciplinar",
+  "Protocolos de Aspiração de Vias Aéreas",
+  "Evolução de Enfermagem",
+  "Módulo de \"Cultura Justa\" e Relato de Incidentes e Eventos Adversos",
+  "Workshop Prático \"Mãos na Massa\" com Acessos Venosos Complexos",
+  "Segregação de Resíduos"
+ ],
+ "programa": [
+  {
+   "num": 1,
+   "tema": "Oxigenoterapia em Transporte",
+   "periodo": "Fevereiro",
+   "status": "Realizado",
+   "turmaCode": "T1"
+  },
+  {
+   "num": 2,
+   "tema": "Simulação de Broncoaspiração",
+   "periodo": "Fevereiro",
+   "status": "Realizado",
+   "turmaCode": "T2"
+  },
+  {
+   "num": 3,
+   "tema": "Simulação e Análise de Quase Acidentes",
+   "periodo": "Fevereiro",
+   "status": "Realizado",
+   "turmaCode": "T3"
+  },
+  {
+   "num": 4,
+   "tema": "Identificação Precoce de Sepse",
+   "periodo": "Março",
+   "status": "Realizado",
+   "turmaCode": "T4"
+  },
+  {
+   "num": 5,
+   "tema": "Manejo de Pacientes Frágeis e Vulneráveis",
+   "periodo": "Março",
+   "status": "Realizado",
+   "turmaCode": "T5"
+  },
+  {
+   "num": 6,
+   "tema": "Checklist de Segurança Pré-Atendimento (Sessão 1)",
+   "periodo": "Abril",
+   "status": "Realizado",
+   "turmaCode": "T15"
+  },
+  {
+   "num": 7,
+   "tema": "Manejo de Surtos Psiquiátricos (Sessão 1)",
+   "periodo": "Abril",
+   "status": "Realizado",
+   "turmaCode": "T16"
+  },
+  {
+   "num": 8,
+   "tema": "Simulação de Falha de Equipamento Crítico (Sessão 1)",
+   "periodo": "Abril",
+   "status": "Realizado",
+   "turmaCode": "T17"
+  },
+  {
+   "num": 9,
+   "tema": "Checklist de Segurança Pré-Atendimento (Sessão 2)",
+   "periodo": "Abril",
+   "status": "Realizado",
+   "turmaCode": "T15"
+  },
+  {
+   "num": 10,
+   "tema": "Manejo de Surtos Psiquiátricos (Sessão 2)",
+   "periodo": "Abril",
+   "status": "Realizado",
+   "turmaCode": "T16"
+  },
+  {
+   "num": 11,
+   "tema": "Simulação de Falha de Equipamento Crítico (Sessão 2)",
+   "periodo": "Abril",
+   "status": "Realizado",
+   "turmaCode": "T17"
+  },
+  {
+   "num": 12,
+   "tema": "Documentação de Dispositivos e Acessos: Prevenção de Erros",
+   "periodo": "Maio",
+   "status": "Realizado",
+   "turmaCode": "T6"
+  },
+  {
+   "num": 13,
+   "tema": "Segurança em Ambientes Confinados",
+   "periodo": "Maio",
+   "status": "Realizado",
+   "turmaCode": "T7"
+  },
+  {
+   "num": 14,
+   "tema": "Gerenciamento de Resíduos Contaminados e Perfurocortantes (Turma 1)",
+   "periodo": "Maio",
+   "status": "Realizado",
+   "turmaCode": "T8"
+  },
+  {
+   "num": 15,
+   "tema": "Prevenção de Quedas Durante Transferências",
+   "periodo": "Junho",
+   "status": "Realizado",
+   "turmaCode": "T9"
+  },
+  {
+   "num": 16,
+   "tema": "Técnicas de Mobilização Segura",
+   "periodo": "Junho",
+   "status": "Realizado",
+   "turmaCode": "T10"
+  },
+  {
+   "num": 17,
+   "tema": "Gerenciamento de Resíduos Contaminados e Perfurocortantes (Turma 2)",
+   "periodo": "Julho",
+   "status": "Realizado",
+   "turmaCode": "T11"
+  },
+  {
+   "num": 18,
+   "tema": "Farmacologia em Emergências",
+   "periodo": "Julho",
+   "status": "Realizado",
+   "turmaCode": "T12"
+  },
+  {
+   "num": 19,
+   "tema": "Contenção Não-Traumática e Prevenção de Quedas",
+   "periodo": "Agosto",
+   "status": "Realizado",
+   "turmaCode": "T13/T14"
+  },
+  {
+   "num": 20,
+   "tema": "Comunicação e Handoff (Passagem de Plantão)",
+   "periodo": "Outubro",
+   "status": "Pendente",
+   "turmaCode": "T18"
+  },
+  {
+   "num": 21,
+   "tema": "Lavagem das Mãos",
+   "periodo": "Outubro",
+   "status": "Pendente",
+   "turmaCode": "T19"
+  },
+  {
+   "num": 22,
+   "tema": "Segregação de Resíduos",
+   "periodo": "Outubro",
+   "status": "Pendente",
+   "turmaCode": "T20"
+  },
+  {
+   "num": 23,
+   "tema": "Workshop de PCR em Idosos",
+   "periodo": "Outubro",
+   "status": "Pendente",
+   "turmaCode": "T21"
+  },
+  {
+   "num": 24,
+   "tema": "Monitorização Pré-Hospitalar",
+   "periodo": "Novembro",
+   "status": "Pendente",
+   "turmaCode": "T22"
+  },
+  {
+   "num": 25,
+   "tema": "Ética e Legislação",
+   "periodo": "Novembro",
+   "status": "Pendente",
+   "turmaCode": "T23"
+  },
+  {
+   "num": 26,
+   "tema": "Treino Multidisciplinar",
+   "periodo": "Novembro",
+   "status": "Pendente",
+   "turmaCode": "T24"
+  },
+  {
+   "num": 27,
+   "tema": "Reposição – Temas de Fev/Mar",
+   "periodo": "Novembro",
+   "status": "Pendente",
+   "turmaCode": "T25"
+  },
+  {
+   "num": 28,
+   "tema": "Protocolos de Aspiração de Vias Aéreas",
+   "periodo": "Novembro",
+   "status": "Pendente",
+   "turmaCode": "T26"
+  },
+  {
+   "num": 29,
+   "tema": "Evolução de Enfermagem",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "T27"
+  },
+  {
+   "num": 30,
+   "tema": "Módulo de \"Cultura Justa\" e Relato de Incidentes",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "T28"
+  },
+  {
+   "num": 31,
+   "tema": "Reposição – Temas de Abr/Ago",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "T29"
+  },
+  {
+   "num": 32,
+   "tema": "Workshop Prático \"Mãos na Massa\" com Acessos Venosos Complexos (Enf)",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "-"
+  },
+  {
+   "num": 33,
+   "tema": "Lavagem das Mãos (Reforço Noturno)",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "-"
+  },
+  {
+   "num": 34,
+   "tema": "Segregação de Resíduos (Reforço Bases)",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "-"
+  },
+  {
+   "num": 35,
+   "tema": "Auditoria Final de Listas de Frequência",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "-"
+  },
+  {
+   "num": 36,
+   "tema": "Consolidação e Certificação Anual SOS 2026",
+   "periodo": "Dezembro",
+   "status": "Pendente",
+   "turmaCode": "-"
+  }
+ ]
+}</script>
+<script type="py">
+"""Motor Python executado no navegador (PyScript/Pyodide). Sem servidor.
+Mesmas regras do main.py; o estado fica no localStorage do navegador."""
+import json
+import re
+from datetime import date, datetime
+
+from pyodide.ffi import create_proxy
+from pyscript import window
+
+SEED = json.loads(window.document.getElementById("seed").textContent)
+KEY = "SOS_TREINAMENTOS_V2"
+PRAZO_FINAL = SEED["config"]["deadline"]
+
+
+class Erro(Exception):
+    pass
+
+
+def data_iso(txt):
+    m = re.search(r"(\d{1,2})(?:-\d{1,2})?/(\d{2})/(\d{4})", txt)
+    return f"{m[3]}-{m[2]}-{int(m[1]):02d}" if m else ""
+
+
+def estado_inicial():
+    turmas = []
+    for t in SEED["turmas"]:
+        reg = {m: {"presente": 1, "justificativa": ""} for m in t.get("presentes", [])}
+        for m, j in (t.get("justificativas") or {}).items():
+            reg.setdefault(m, {"presente": 0, "justificativa": j})
+        turmas.append({"id": t["id"], "code": t["code"], "tema": t["tema"], "data_txt": t["data"],
+                       "data_iso": data_iso(t["data"]), "instrutores": t["instrutores"],
+                       "status": t["status"], "reg": reg})
+    pessoas = [{"mat": p["mat"], "nome": p["nome"], "cargo": p["cargo"],
+                "ativo": 0 if p.get("isEx") else 1, "email": ""} for p in SEED["participantes"]]
+    return {"participantes": pessoas, "turmas": turmas}
+
+
+def carrega():
+    raw = window.localStorage.getItem(KEY)
+    if raw:
+        try:
+            return json.loads(raw)
+        except Exception:
+            pass
+    return estado_inicial()
+
+
+ST = carrega()
+
+
+def salva():
+    window.localStorage.setItem(KEY, json.dumps(ST))
+
+
+def n_presencas(mat):
+    return sum(1 for t in ST["turmas"] if t["reg"].get(mat, {}).get("presente") == 1)
+
+
+def com_presencas(lista):
+    return [{**p, "presencas": n_presencas(p["mat"])} for p in lista]
+
+
+def ativos():
+    return sorted(com_presencas([p for p in ST["participantes"] if p["ativo"]]), key=lambda p: p["nome"])
+
+
+def turmas_ordenadas():
+    return sorted(ST["turmas"], key=lambda t: (t["data_iso"], t["id"]))
+
+
+def dashboard():
+    at = ativos()
+    pend = [p for p in at if p["presencas"] == 0]
+    status = {t["code"]: t["status"] for t in ST["turmas"]}
+    cargos = {}
+    for p in at:
+        cargos[p["cargo"]] = cargos.get(p["cargo"], 0) + 1
+    meses = {}
+    for e in SEED["programa"]:
+        ok = all(status.get(c) == "Realizada" for c in e["turmaCode"].split("/"))
+        meses.setdefault(e["periodo"], [0, 0])[0 if ok else 1] += 1
+    fut = [t for t in turmas_ordenadas() if t["status"] == "Agendada"]
+    hoje = date.today().isoformat()
+    prox = next((t for t in fut if t["data_iso"] >= hoje), fut[0] if fut else None)
+    return {"kpis": {"base": len(at), "treinados": len(at) - len(pend), "pendentes": len(pend),
+                     "ex": sum(1 for p in ST["participantes"] if not p["ativo"]), "prazo": PRAZO_FINAL},
+            "pendentes": pend, "cargos": cargos, "proxima": prox,
+            "programa": {"meses": meses, "entregas_ok": sum(v[0] for v in meses.values()),
+                         "entregas": len(SEED["programa"])}}
+
+
+def cobertura():
+    mats = {p["mat"] for p in ST["participantes"] if p["ativo"]}
+    por_tema = {}
+    for t in ST["turmas"]:
+        for m, r in t["reg"].items():
+            if r["presente"] == 1:
+                por_tema.setdefault(t["tema"], set()).add(m)
+    out = []
+    for tema in SEED["topics"]:
+        ok = len(por_tema.get(tema, set()) & mats)
+        out.append({"tema": tema, "treinados": ok, "pendentes": len(mats) - ok,
+                    "pct": round(100 * ok / len(mats)) if mats else 0})
+    return sorted(out, key=lambda x: x["pct"])
+
+
+def relatorio():
+    turmas_de = {}
+    for t in turmas_ordenadas():
+        for mat, r in t["reg"].items():
+            if r["presente"] == 1:
+                turmas_de.setdefault(mat, []).append(t["code"])
+    linhas = [{**p, "turmas": turmas_de.get(p["mat"], [])}
+              for p in sorted(ativos(), key=lambda p: (p["cargo"], p["nome"]))]
+    return {"gerado": datetime.now().strftime("%d/%m/%Y %H:%M"), "prazo": PRAZO_FINAL, "base": len(linhas),
+            "treinados": [l for l in linhas if l["presencas"] > 0],
+            "nao_treinados": [l for l in linhas if l["presencas"] == 0]}
+
+
+def acha_turma(tid):
+    t = next((t for t in ST["turmas"] if t["id"] == tid), None)
+    if not t:
+        raise Erro("Turma não encontrada.")
+    return t
+
+
+def rota(m, path, b):
+    if m == "GET" and path == "/api/dashboard":
+        return dashboard()
+    if m == "GET" and path == "/api/relatorio":
+        return relatorio()
+    if m == "GET" and path == "/api/cobertura":
+        return cobertura()
+    if m == "GET" and path == "/api/participantes":
+        return sorted(com_presencas(ST["participantes"]), key=lambda p: (-p["ativo"], p["nome"]))
+    if m == "POST" and path == "/api/participantes":
+        mat, nome = str(b.get("mat", "")).strip(), str(b.get("nome", "")).strip()
+        if not mat or not nome:
+            raise Erro("Informe nome e matrícula.")
+        if any(p["mat"] == mat for p in ST["participantes"]):
+            raise Erro("Matrícula já cadastrada.")
+        ST["participantes"].append({"mat": mat, "nome": nome, "cargo": b["cargo"], "ativo": 1, "email": ""})
+        salva()
+        return {}
+    g = re.fullmatch(r"/api/participantes/(.+)", path)
+    if m == "PATCH" and g:
+        p = next((p for p in ST["participantes"] if p["mat"] == g[1]), None)
+        if not p:
+            raise Erro("Participante não encontrado.")
+        if b.get("email") is not None:
+            e = b["email"].strip()
+            if e and not re.fullmatch(r"[^@\s]+@[^@\s]+\.[^@\s]+", e):
+                raise Erro("E-mail inválido.")
+            p["email"] = e
+        if b.get("ativo") is not None:
+            p["ativo"] = int(b["ativo"])
+        salva()
+        return {}
+    if m == "GET" and path == "/api/turmas":
+        return [{k: v for k, v in t.items() if k != "reg"} |
+                {"presentes": sum(1 for r in t["reg"].values() if r["presente"] == 1)}
+                for t in turmas_ordenadas()]
+    g = re.fullmatch(r"/api/turmas/(\d+)", path)
+    if m == "GET" and g:
+        t = acha_turma(int(g[1]))
+        lista = [{"mat": p["mat"], "nome": p["nome"], "cargo": p["cargo"],
+                  "presente": (bool(t["reg"][p["mat"]]["presente"]) if p["mat"] in t["reg"] else None),
+                  "justificativa": t["reg"].get(p["mat"], {}).get("justificativa", "")} for p in ativos()]
+        return {"turma": {k: v for k, v in t.items() if k != "reg"}, "participantes": lista}
+    g = re.fullmatch(r"/api/turmas/(\d+)/presenca", path)
+    if m == "PUT" and g:
+        t = acha_turma(int(g[1]))
+        for r in b["registros"]:
+            if not r["presente"] and not r.get("justificativa", "").strip():
+                raise Erro(f"Justificativa obrigatória para a ausência da matrícula {r['mat']}.")
+        t["reg"] = {r["mat"]: {"presente": int(r["presente"]), "justificativa": r.get("justificativa", "").strip()}
+                    for r in b["registros"]}
+        if any(r["presente"] for r in b["registros"]):
+            t["status"] = "Realizada"
+        salva()
+        return {}
+    raise Erro("Rota não encontrada.")
+
+
+def handle(method, path, body):
+    try:
+        return json.dumps({"ok": True, "data": rota(method, path, json.loads(body) if body else {})})
+    except Erro as e:
+        return json.dumps({"ok": False, "detail": str(e)})
+
+
+window.pyHandle = create_proxy(handle)
+window.__pyOk()
+
+</script>
+<script>
+const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pyReady=new Promise(r=>window.__pyOk=r);
+const api=async(u,o={})=>{await pyReady;const r=JSON.parse(window.pyHandle(o.m||'GET',u,o.b?JSON.stringify(o.b):''));if(!r.ok)throw new Error(r.detail);return r.data};
+pyReady.then(()=>$('#boot').remove());
+const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2800)};
+const cap=s=>s.charAt(0)+s.slice(1).toLowerCase();
+const G=['rgba(0,153,93,.62)','rgba(79,191,138,.55)','rgba(0,86,58,.6)','rgba(191,232,212,.8)','rgba(2,40,28,.45)'];
+const lay=(x={})=>({margin:{t:8,r:8,b:36,l:36},paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{family:'Segoe UI',size:12,color:'#10281f'},...x});
+const cfg={displayModeBar:false,responsive:true};
+const tag=(t,c='')=>`<span class="tag ${c}">${esc(t)}</span>`;
+const rows=(el,html)=>{el.innerHTML=html.map((h,i)=>h.replace('<tr','<tr style="--i:'+Math.min(i,30)+'"')).join('')};
+const pctCls=p=>p>=100?'':p>=60?'w':'r';
+function count(el,to){if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=to;return}
+  const t0=performance.now();(function f(t){const k=Math.min((t-t0)/900,1);el.textContent=Math.round(to*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(f)})(t0)}
+function grow(root){root.querySelectorAll('.fill').forEach(f=>{f.style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>f.style.width=f.dataset.w+'%'))})}
+
+/* ---------- navegação ---------- */
+const views={dashboard:loadDash,participantes:loadPart,turmas:loadTurmas,cobertura:loadCob};
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>show(b.dataset.v));
+function show(v){document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+  document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===v));views[v]()}
+
+/* ---------- dashboard ---------- */
+async function loadDash(){
+  const d=await api('/api/dashboard'),k=d.kpis,pr=d.programa;
+  $('#kpis').innerHTML=[['Base ativa',k.base,''],['Treinados',k.treinados,''],['Pendentes (zero treinos)',k.pendentes,'bad'],['Ex-colaboradores',k.ex,'']]
+    .map(([l,v,c])=>`<div class="card kpi ${c}"><div class="l">${l}</div><div class="v" data-to="${v}">0</div></div>`).join('');
+  document.querySelectorAll('.kpi .v').forEach(e=>count(e,+e.dataset.to));
+  const p=d.proxima;
+  $('#prox-t').textContent=p?`${p.code} - ${p.tema}`:'Nenhuma turma agendada';
+  $('#prox-d').textContent=p?`${p.data_txt} · ${k.pendentes} convocados prioritários · prazo final ${k.prazo}`:'';
+  const lista=d.pendentes.map((x,i)=>`${i+1}. ${x.nome} (${x.mat}) - ${x.cargo}`).join('\n');
+  $('#mail').href='mailto:?subject='+encodeURIComponent('Convocação de treinamento - '+(p?p.tema:''))+'&body='+encodeURIComponent('Convocados prioritários:\n'+lista);
+  rows($('#pend'),d.pendentes.map(x=>`<tr><td><b>${esc(x.nome)}</b></td><td>${esc(x.mat)}</td><td>${tag(x.cargo,'off')}</td></tr>`));
+  const pat=(s,fg)=>({shape:s,fgcolor:fg,bgcolor:'rgba(255,255,255,.55)',size:7,solidity:.45});
+  Plotly.newPlot('c1',[{type:'pie',hole:.62,labels:['Treinados','Pendentes'],values:[k.treinados,k.pendentes],sort:false,textinfo:'percent',
+    marker:{colors:['rgba(0,153,93,.75)','rgba(183,121,31,.6)'],pattern:pat(['','/'],'#00563a'),line:{color:'#fff',width:2}}}],lay({margin:{t:4,b:4,l:4,r:4},legend:{orientation:'h',y:-.05}}),cfg);
+  const pc={};d.pendentes.forEach(p=>pc[p.cargo]=(pc[p.cargo]||0)+1);
+  const cs=Object.entries(d.cargos).sort((a,b)=>b[1]-a[1]),nm=cs.map(c=>cap(c[0])),tr=cs.map(c=>c[1]-(pc[c[0]]||0)),pe=cs.map(c=>pc[c[0]]||0),mx=Math.max(...cs.map(c=>c[1]),1);
+  const lbl=a=>a.map(v=>v?String(v):'');
+  const serie=(name,col,pat)=>({type:'bar',orientation:'h',name,y:nm,x:nm.map(()=>0),text:nm.map(()=>''),textposition:'inside',insidetextanchor:'middle',hovertemplate:'%{y}<br>'+name+': %{x}<extra></extra>',
+    marker:{color:col,pattern:pat,line:{color:'rgba(255,255,255,.9)',width:1.5}},textfont:{color:'#02281c',size:13}});
+  Plotly.newPlot('c2',[serie('Treinados','rgba(0,153,93,.6)',{shape:'/',fgcolor:'rgba(0,86,58,.55)',bgcolor:'rgba(255,255,255,.35)',size:7,solidity:.3}),
+    serie('Pendentes','rgba(217,164,65,.55)',{shape:'.',fgcolor:'rgba(150,100,20,.6)',bgcolor:'rgba(255,255,255,.4)',size:6,solidity:.35})],
+    lay({barmode:'stack',bargap:.42,margin:{t:28,r:12,b:28,l:132},legend:{orientation:'h',y:1.13,x:0},
+      yaxis:{autorange:'reversed',showgrid:false,zeroline:false,ticks:''},xaxis:{range:[0,mx*1.08],gridcolor:'rgba(0,86,58,.08)',zeroline:false,tickformat:'d',dtick:mx>20?5:1}}),cfg)
+    .then(()=>Plotly.animate('c2',{data:[{x:tr,text:lbl(tr)},{x:pe,text:lbl(pe)}],traces:[0,1]},{transition:{duration:900,easing:'cubic-out'},frame:{duration:900}}));
+  const ms=Object.entries(pr.meses);
+  Plotly.newPlot('c3',[{type:'bar',name:'Realizadas',x:ms.map(m=>m[0].slice(0,3)),y:ms.map(()=>0),marker:{color:'rgba(0,153,93,.7)',pattern:{shape:'/',fgcolor:'#00563a',size:6,solidity:.3}}},
+    {type:'bar',name:'Pendentes',x:ms.map(m=>m[0].slice(0,3)),y:ms.map(()=>0),marker:{color:'rgba(191,232,212,.85)',pattern:{shape:'x',fgcolor:'#4fbf8a',size:6,solidity:.3}}}],
+    lay({barmode:'stack',legend:{orientation:'h',y:1.15},yaxis:{gridcolor:'rgba(0,86,58,.08)',range:[0,Math.max(...ms.map(m=>m[1][0]+m[1][1]),1)+1],dtick:1,zeroline:false}}),cfg)
+    .then(()=>Plotly.animate('c3',{data:[{y:ms.map(m=>m[1][0])},{y:ms.map(m=>m[1][1])}],traces:[0,1]},{transition:{duration:900,easing:'cubic-out'},frame:{duration:900}}));
+  $('#c1').classList.add('fade');
+}
+
+/* ---------- participantes ---------- */
+let PART=[];
+async function loadPart(){PART=await api('/api/participantes');
+  const cs=[...new Set(PART.map(p=>p.cargo))];$('#f-c').innerHTML='<option value="">Todas as funções</option>'+cs.map(c=>`<option>${esc(c)}</option>`).join('');drawPart()}
+function drawPart(){
+  const q=$('#f-q').value.toLowerCase(),c=$('#f-c').value,s=$('#f-s').value;
+  const l=PART.filter(p=>(!q||p.nome.toLowerCase().includes(q)||p.mat.includes(q))&&(!c||p.cargo===c)&&
+    (!s||(s==='X'?!p.ativo:p.ativo&&(s==='T'?p.presencas>0:p.presencas===0))));
+  rows($('#tp'),l.map(p=>`<tr><td><b>${esc(p.nome)}</b></td><td>${esc(p.mat)}</td><td>${tag(p.cargo,'off')}</td>
+    <td><input type="email" value="${esc(p.email)}" placeholder="nome@unimedvx.com.br" data-mat="${esc(p.mat)}" style="width:230px"></td>
+    <td class="n">${p.presencas}</td><td>${!p.ativo?tag('Desligado','off'):p.presencas?tag('Treinado'):tag('Pendente','bad')}</td>
+    <td>${p.ativo?`<button class="b ghost sm" data-off="${esc(p.mat)}">Desligar</button>`:''}</td></tr>`));
+}
+['#f-q','#f-c','#f-s'].forEach(s=>$(s).oninput=drawPart);
+$('#tp').addEventListener('change',async e=>{if(!e.target.dataset.mat)return;
+  try{await api('/api/participantes/'+e.target.dataset.mat,{m:'PATCH',b:{email:e.target.value}});toast('E-mail salvo')}catch(x){toast(x.message)}});
+$('#tp').addEventListener('click',async e=>{const m=e.target.dataset.off;if(!m||!confirm('Desligar este colaborador da base ativa? O histórico será preservado.'))return;
+  await api('/api/participantes/'+m,{m:'PATCH',b:{ativo:false}});toast('Colaborador desligado');loadPart()});
+$('#novo').onclick=()=>{const d=$('#dlg');d.innerHTML=`<div class="dh"><b>Novo participante</b></div><div class="db" style="display:grid;gap:12px">
+  <input id="n-n" placeholder="Nome completo"><input id="n-m" placeholder="Matrícula"><select id="n-c">${['ENFERMEIRO','TÉCNICO DE ENFERMAGEM','MOTORISTA SOCORRISTA','CONDUTOR','A CONFIRMAR'].map(c=>`<option>${c}</option>`).join('')}</select></div>
+  <div class="df"><span class="err" id="n-e"></span><button class="b ghost" onclick="dlg.close()">Cancelar</button><button class="b" id="n-ok">Salvar</button></div>`;
+  d.showModal();$('#n-ok').onclick=async()=>{try{await api('/api/participantes',{m:'POST',b:{nome:$('#n-n').value,mat:$('#n-m').value,cargo:$('#n-c').value}});d.close();toast('Participante cadastrado');loadPart()}catch(x){$('#n-e').textContent=x.message}}};
+
+/* ---------- turmas ---------- */
+let TUR=[];
+async function loadTurmas(){TUR=await api('/api/turmas');drawTur()}
+function drawTur(){const q=$('#t-q').value.toLowerCase(),s=$('#t-s').value;
+  rows($('#tt'),TUR.filter(t=>(!q||(t.tema+t.instrutores+t.code).toLowerCase().includes(q))&&(!s||t.status===s)).map(t=>
+    `<tr><td><b>${esc(t.code)}</b></td><td>${esc(t.tema)}</td><td>${esc(t.data_txt)}</td><td>${esc(t.instrutores)}</td><td class="n">${t.presentes}</td>
+    <td>${tag(t.status,t.status==='Realizada'?'':'warn')}</td><td><button class="b sm" data-id="${t.id}">Lançar presença</button></td></tr>`))}
+['#t-q','#t-s'].forEach(s=>$(s).oninput=drawTur);
+$('#tt').addEventListener('click',async e=>{const id=e.target.dataset.id;if(!id)return;
+  const {turma:t,participantes:ps}=await api('/api/turmas/'+id),d=$('#dlg');
+  d.innerHTML=`<div class="dh"><div><b>${esc(t.code)} - ${esc(t.tema)}</b><div class="sub" style="margin:2px 0 0;font-size:12.5px">${esc(t.data_txt)}</div></div>
+    <button class="b ghost sm" id="all">Marcar todos presentes</button></div>
+    <div class="db">${ps.map(p=>`<div class="prow" data-mat="${esc(p.mat)}"><span>${esc(p.nome)}</span>
+    <select><option value="">Sem registro</option><option value="1"${p.presente===true?' selected':''}>Presente</option><option value="0"${p.presente===false?' selected':''}>Ausente</option></select>
+    <input placeholder="Justificativa (obrigatória se ausente)" value="${esc(p.justificativa)}"></div>`).join('')}</div>
+    <div class="df"><span class="err" id="a-e"></span><button class="b ghost" onclick="dlg.close()">Cancelar</button><button class="b" id="a-ok">Salvar frequência</button></div>`;
+  d.showModal();
+  $('#all').onclick=()=>d.querySelectorAll('.prow select').forEach(s=>s.value='1');
+  $('#a-ok').onclick=async()=>{const registros=[...d.querySelectorAll('.prow')].filter(r=>r.querySelector('select').value!=='')
+    .map(r=>({mat:r.dataset.mat,presente:r.querySelector('select').value==='1',justificativa:r.querySelector('input').value}));
+    try{await api(`/api/turmas/${id}/presenca`,{m:'PUT',b:{registros}});d.close();toast('Frequência salva');loadTurmas()}catch(x){$('#a-e').textContent=x.message}}});
+
+/* ---------- cobertura ---------- */
+async function loadCob(){const l=await api('/api/cobertura');
+  rows($('#tc'),l.map(c=>`<tr><td>${esc(c.tema)}</td><td class="n">${c.treinados}</td><td class="n">${c.pendentes}</td>
+    <td><div class="track"><div class="fill ${pctCls(c.pct)}" data-w="${c.pct}"></div></div></td>
+    <td>${tag(c.pct+'%',c.pct>=100?'':c.pct>=60?'warn':'bad')}</td></tr>`));grow($('#tc'))}
+
+/* ---------- relatório para impressão ---------- */
+async function relatorio(){
+  const r=await api('/api/relatorio'),pct=r.base?Math.round(100*r.treinados.length/r.base):0;
+  const tab=(l,com)=>l.length?`<table><thead><tr><th>#</th><th>Nome</th><th>Matrícula</th><th>Função</th>${com?'<th>Turmas frequentadas</th><th class="n">Presenças</th>':'<th>Situação</th>'}</tr></thead><tbody>${l.map((p,i)=>`<tr><td>${i+1}</td><td>${esc(p.nome)}</td><td>${esc(p.mat)}</td><td>${esc(cap(p.cargo))}</td>${com?`<td>${esc(p.turmas.join(', '))}</td><td class="n">${p.presencas}</td>`:'<td>Sem participação registrada</td>'}</tr>`).join('')}</tbody></table>`:'<p>Nenhum colaborador nesta situação.</p>';
+  $('#rel').innerHTML=`<div class="rh"><div><b>Relatório de Treinamentos</b><br>SOS Emergências Médicas · Unimed Vitória</div><div>Emitido em ${esc(r.gerado)}</div></div>
+    <div class="rs"><div><b>${r.base}</b>Base ativa</div><div><b>${r.treinados.length}</b>Treinados (${pct}%)</div><div><b>${r.nao_treinados.length}</b>Não treinados (${100-pct}%)</div></div>
+    <h2>Colaboradores treinados (${r.treinados.length})</h2>${tab(r.treinados,true)}
+    <h2>Colaboradores não treinados (${r.nao_treinados.length})</h2>${tab(r.nao_treinados,false)}
+    <p class="rn">Treinado: colaborador ativo com ao menos uma presença registrada em 2026. Ex-colaboradores não estão incluídos. Prazo para regularização das pendências: ${esc(r.prazo)}.</p>
+    <div class="sig">Responsável pelo SOS Emergências Médicas</div>`;
+  document.body.classList.add('rel-on');
+  window.addEventListener('afterprint',()=>document.body.classList.remove('rel-on'),{once:true});
+  setTimeout(()=>window.print(),80);
+}
+document.querySelectorAll('[data-rel]').forEach(b=>b.onclick=relatorio);
+
+loadDash();
+</script>
+</body>
+</html>

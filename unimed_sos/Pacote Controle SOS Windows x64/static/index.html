@@ -134,7 +134,7 @@ body.rel-on #rel{display:block;width:100%;color:#10281f;font-size:11.5px}
 <section id="participantes">
   <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
     <div><h1>Participantes</h1><p class="sub">Base ativa, e-mails de contato e situação de treinamento.</p></div>
-    <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="b ghost" data-rel>Relatório para impressão</button><button class="b" id="novo">Novo participante</button></div></div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="b ghost" data-rel>Relatório para impressão</button><button class="b ghost" id="importar">Importar Excel</button><input id="arquivo-excel" type="file" accept=".xlsx,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden><button class="b" id="novo">Novo participante</button></div></div>
   <div class="bar"><input id="f-q" placeholder="Buscar por nome ou matrícula"><select id="f-c"><option value="">Todas as funções</option></select>
     <select id="f-s"><option value="">Todas as situações</option><option value="T">Treinado</option><option value="P">Pendente</option><option value="X">Desligado</option></select></div>
   <div class="card" style="padding:6px 10px;overflow-x:auto"><table><thead><tr><th>Nome</th><th>Matrícula</th><th>Função</th><th>E-mail</th><th class="n">Presenças</th><th>Situação</th><th></th></tr></thead><tbody id="tp"></tbody></table></div>
@@ -231,6 +231,37 @@ $('#novo').onclick=()=>{const d=$('#dlg');d.innerHTML=`<div class="dh"><b>Novo p
   <input id="n-n" placeholder="Nome completo"><input id="n-m" placeholder="Matrícula"><input id="n-c" list="cargos-l" placeholder="Função / Cargo"><datalist id="cargos-l">${[...new Set([...PART.map(p=>p.cargo),'ENFERMEIRO','TÉCNICO DE ENFERMAGEM','MOTORISTA SOCORRISTA','CONDUTOR'])].map(c=>`<option value="${esc(c)}">`).join('')}</datalist></div>
   <div class="df"><span class="err" id="n-e"></span><button class="b ghost" onclick="dlg.close()">Cancelar</button><button class="b" id="n-ok">Salvar</button></div>`;
   d.showModal();$('#n-ok').onclick=async()=>{try{await api('/api/participantes',{m:'POST',b:{nome:$('#n-n').value,mat:$('#n-m').value,cargo:$('#n-c').value.trim().toUpperCase()}});d.close();toast('Participante cadastrado');loadPart()}catch(x){$('#n-e').textContent=x.message}}};
+
+$('#importar').onclick=()=>$('#arquivo-excel').click();
+$('#arquivo-excel').onchange=async e=>{
+  const file=e.target.files[0];
+  e.target.value='';
+  if(!file)return;
+  const button=$('#importar');
+  button.disabled=true;
+  try{
+    const response=await fetch('/api/participantes/importar?filename='+encodeURIComponent(file.name),{
+      method:'POST',
+      headers:{'Content-Type':'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'},
+      body:file
+    });
+    const result=await response.json();
+    if(!response.ok)throw new Error(result.detail||'Erro ao importar a planilha.');
+    const erros=result.erros.length
+      ?`<div style="margin-top:12px"><b>Linhas não importadas:</b><ul>${result.erros.map(erro=>`<li>${esc(erro)}</li>`).join('')}</ul></div>`:'';
+    const d=$('#dlg');
+    d.innerHTML=`<div class="dh"><b>Importação concluída</b></div><div class="db">
+      <p><b>${result.inseridos}</b> participante(s) inserido(s).</p>
+      <p><b>${result.duplicados}</b> matrícula(s) já cadastrada(s), ignorada(s).</p>
+      <p><b>${result.erros.length}</b> linha(s) com dados inválidos.</p>${erros}
+      <p class="sub" style="margin:12px 0 0">Cadastros existentes foram preservados.</p></div>
+      <div class="df"><button class="b" id="importar-ok">Fechar</button></div>`;
+    d.showModal();
+    $('#importar-ok').onclick=()=>d.close();
+    await loadPart();
+  }catch(error){toast(error.message)}
+  finally{button.disabled=false}
+};
 
 /* ---------- turmas ---------- */
 let TUR=[];

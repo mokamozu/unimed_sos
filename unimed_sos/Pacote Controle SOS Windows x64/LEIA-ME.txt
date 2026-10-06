@@ -22,4 +22,12 @@ DADOS E PRIVACIDADE
   no destino com o aplicativo fechado.
 - O pacote nao inclui banco de dados nem dados pessoais.
 
+IMPORTAR PARTICIPANTES DE UMA PLANILHA
+- Na tela Participantes, clique em "Importar Excel" e selecione um arquivo .xlsx.
+- A primeira linha deve conter os cabecalhos Matrícula, Nome e Cargo.
+  E-mail e opcional. Tambem sao aceitos os nomes Mat, Funcao e Email.
+- Cada linha seguinte representa um participante. Linhas sem dados sao ignoradas.
+- Matriculas ja cadastradas sao ignoradas e os cadastros existentes nao sao alterados.
+- Salve matriculas como texto no Excel para preservar zeros a esquerda.
+
 Se o aplicativo nao abrir, contate o suporte de TI e informe o erro exibido.

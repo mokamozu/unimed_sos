@@ -8,14 +8,17 @@ import re
 import shutil
 import sqlite3
 import sys
+import unicodedata
+from io import BytesIO
 from contextlib import contextmanager
 from datetime import date, datetime
 from pathlib import Path
 from typing import Optional
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
+from openpyxl import load_workbook
 from pydantic import BaseModel
 
 # Recursos (static, seed) ficam dentro do programa; o banco fica em Documentos para facilitar o backup.
@@ -66,6 +69,23 @@ def db():
 
 def q(con, sql, *args):
     return [dict(r) for r in con.execute(sql, args).fetchall()]
+
+
+def _texto_planilha(valor) -> str:
+    if valor is None:
+        return ""
+    if isinstance(valor, bool):
+        return str(valor)
+    if isinstance(valor, int):
+        return str(int(valor))
+    if isinstance(valor, float) and valor.is_integer():
+        return str(int(valor))
+    return str(valor).strip()
+
+
+def _cabecalho_planilha(valor) -> str:
+    texto = unicodedata.normalize("NFKD", _texto_planilha(valor).casefold())
+    return "".join(c for c in texto if not unicodedata.combining(c) and c.isalnum())
 
 
 def init_db():
@@ -189,6 +209,91 @@ def cria_participante(p: NovoParticipante):
         c.execute("INSERT INTO participantes(mat,nome,cargo) VALUES(?,?,?)",
                   (p.mat.strip(), p.nome.strip(), p.cargo))
     return {"ok": True}
+
+
+@app.post("/api/participantes/importar")
+async def importar_participantes(request: Request, filename: str = ""):
+    if Path(filename).suffix.casefold() != ".xlsx":
+        raise HTTPException(400, "Selecione uma planilha Excel no formato .xlsx.")
+    conteudo = await request.body()
+    if not conteudo:
+        raise HTTPException(400, "O arquivo selecionado está vazio.")
+    if len(conteudo) > 10 * 1024 * 1024:
+        raise HTTPException(413, "O arquivo deve ter no máximo 10 MB.")
+
+    try:
+        workbook = load_workbook(BytesIO(conteudo), read_only=True, data_only=True)
+    except Exception as exc:
+        raise HTTPException(400, "Não foi possível ler a planilha. Verifique se o arquivo .xlsx é válido.") from exc
+
+    try:
+        sheet = workbook.active
+        rows = sheet.iter_rows(values_only=True)
+        headers = next(rows, None)
+        if not headers:
+            raise HTTPException(422, "A planilha está vazia. A primeira linha deve conter os cabeçalhos.")
+
+        aliases = {
+            "mat": {"mat", "matricula"},
+            "nome": {"nome", "nomecompleto"},
+            "cargo": {"cargo", "funcao"},
+            "email": {"email", "enderecodeemail"},
+        }
+        columns = {}
+        for index, value in enumerate(headers):
+            normalized = _cabecalho_planilha(value)
+            for field, names in aliases.items():
+                if normalized in names:
+                    columns.setdefault(field, index)
+        missing = [field for field in ("mat", "nome", "cargo") if field not in columns]
+        if missing:
+            labels = {"mat": "Matrícula", "nome": "Nome", "cargo": "Cargo"}
+            raise HTTPException(
+                422,
+                "Colunas obrigatórias não encontradas: " + ", ".join(labels[field] for field in missing) + ".",
+            )
+
+        novos = []
+        erros = []
+        for numero, row in enumerate(rows, start=2):
+            if numero > 10001:
+                raise HTTPException(422, "A planilha pode conter no máximo 10.000 linhas de dados.")
+            if not any(_texto_planilha(value) for value in row):
+                continue
+
+            def valor(field):
+                index = columns.get(field)
+                return _texto_planilha(row[index] if index is not None and index < len(row) else None)
+
+            mat, nome, cargo, email = (valor(field) for field in ("mat", "nome", "cargo", "email"))
+            faltando = [label for field, label in (("mat", "Matrícula"), ("nome", "Nome"), ("cargo", "Cargo"))
+                        if not valor(field)]
+            if faltando:
+                erros.append(f"Linha {numero}: campo obrigatório vazio ({', '.join(faltando)}).")
+                continue
+            if email and not re.fullmatch(r"[^@\s]+@[^@\s]+\.[^@\s]+", email):
+                erros.append(f"Linha {numero}: e-mail inválido.")
+                continue
+            novos.append((mat, nome, cargo, email, numero))
+    finally:
+        workbook.close()
+
+    inseridos = 0
+    duplicados = 0
+    with db() as c:
+        existentes = {row["mat"] for row in c.execute("SELECT mat FROM participantes")}
+        for mat, nome, cargo, email, numero in novos:
+            if mat in existentes:
+                duplicados += 1
+                continue
+            c.execute(
+                "INSERT INTO participantes(mat,nome,cargo,email) VALUES(?,?,?,?)",
+                (mat, nome, cargo, email),
+            )
+            existentes.add(mat)
+            inseridos += 1
+
+    return {"inseridos": inseridos, "duplicados": duplicados, "erros": erros}
 
 
 @app.patch("/api/participantes/{mat}")
